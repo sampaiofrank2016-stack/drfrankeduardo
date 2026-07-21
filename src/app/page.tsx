@@ -1,65 +1,525 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const articles = [
+  {
+    category: "Dor e movimento",
+    title: "Fibromialgia: por que a dor pode aparecer em várias regiões?",
+    description:
+      "Entenda como a fibromialgia afeta o organismo e quais caminhos podem ajudar no controle dos sintomas.",
+    href: "/artigos/fibromialgia",
+  },
+  {
+    category: "Coluna",
+    title: "Hérnia de disco: o exame explica toda a sua dor?",
+    description:
+      "Descubra por que alterações encontradas na ressonância nem sempre representam a intensidade dos sintomas.",
+    href: "/artigos/hernia-de-disco",
+  },
+  {
+    category: "Ombro",
+    title: "Dor no ombro: quando é hora de procurar ajuda?",
+    description:
+      "Conheça alguns sinais de atenção e entenda por que uma boa avaliação faz diferença.",
+    href: "/artigos/dor-no-ombro",
+  },
+];
+
+const authorityItems = [
+  {
+    value: "+15",
+    label: "anos de experiência clínica",
+  },
+  {
+    value: "2009",
+    label: "ano de início da atuação profissional",
+  },
+  {
+    value: "+2 mil",
+    label: "pessoas acompanhando o canal",
+  },
+  {
+    value: "Saúde",
+    label: "conteúdo acessível e responsável",
+  },
+];
+
+const trainingPaths = [
+  {
+    eyebrow: "Para pacientes",
+    title: "Entenda sua condição e participe melhor do seu cuidado",
+    description:
+      "Programas educativos para ajudar você a compreender sintomas, tratamentos e possibilidades para viver com mais segurança.",
+    button: "Ver treinamentos para pacientes",
+    href: "/treinamentos/pacientes",
+  },
+  {
+    eyebrow: "Para fisioterapeutas",
+    title: "Aprimore sua prática clínica e desenvolva sua carreira",
+    description:
+      "Cursos, formações e mentorias para profissionais que desejam atender melhor e crescer com organização.",
+    button: "Ver treinamentos profissionais",
+    href: "/treinamentos/fisioterapeutas",
+  },
+];
+
+const technologyItems = [
+  {
+    name: "Amparo Care",
+    audience: "Para famílias e cuidadores",
+    title: "Mais organização e segurança no cuidado de quem você ama",
+    description:
+      "Medicamentos, consultas, alertas e informações importantes reunidos em uma solução simples para o dia a dia.",
+    href: "/tecnologia/amparo-care",
+  },
+  {
+    name: "FisioClinic",
+    audience: "Para fisioterapeutas",
+    title: "Organização clínica para quem trabalha de forma autônoma",
+    description:
+      "Agenda, prontuário, financeiro, documentos e relacionamento com pacientes em um único sistema.",
+    href: "/tecnologia/fisioclinic",
+  },
+];
+
+function ArrowIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className="arrow-icon"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+    >
+      <path d="M5 12h14" />
+      <path d="m13 6 6 6-6 6" />
+    </svg>
+  );
+}
+
+function CheckIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className="check-icon"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+    >
+      <path d="m5 12 4 4L19 6" />
+    </svg>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <div className="site-shell">
+      <header className="site-header">
+        <div className="container header-content">
+          <Link href="/" className="brand" aria-label="Página inicial">
+            <span className="brand-mark">FE</span>
+
+            <span className="brand-copy">
+              <strong>Dr. Frank Eduardo</strong>
+              <small>Educação em saúde</small>
+            </span>
+          </Link>
+
+          <nav className="desktop-navigation" aria-label="Navegação principal">
+            <Link href="/">Início</Link>
+            <Link href="/artigos">Artigos</Link>
+            <Link href="/treinamentos">Treinamentos</Link>
+            <Link href="/tecnologia">Tecnologia</Link>
+            <Link href="/consultorio">Consultório</Link>
+            <Link href="/sobre">Sobre</Link>
+          </nav>
+
+          <Link href="/consultorio" className="header-cta">
+            Agendar consulta
+          </Link>
+
+          <details className="mobile-navigation">
+            <summary aria-label="Abrir menu">
+              <span />
+              <span />
+              <span />
+            </summary>
+
+            <div className="mobile-menu">
+              <Link href="/">Início</Link>
+              <Link href="/artigos">Artigos</Link>
+              <Link href="/treinamentos">Treinamentos</Link>
+              <Link href="/tecnologia">Tecnologia</Link>
+              <Link href="/consultorio">Consultório</Link>
+              <Link href="/sobre">Sobre</Link>
+              <Link href="/consultorio" className="mobile-menu-cta">
+                Agendar consulta
+              </Link>
+            </div>
+          </details>
+        </div>
+      </header>
+
+      <main>
+        <section className="hero">
+          <div className="hero-decoration hero-decoration-one" />
+          <div className="hero-decoration hero-decoration-two" />
+
+          <div className="container hero-grid">
+            <div className="hero-content">
+              <span className="eyebrow">Conhecimento que transforma vidas</span>
+
+              <h1>
+                Educação em saúde para quem quer{" "}
+                <span>viver melhor, atender melhor</span> e transformar mais
+                vidas.
+              </h1>
+
+              <p>
+                Conteúdos confiáveis, treinamentos, atendimento e tecnologia
+                para pacientes, fisioterapeutas, famílias e cuidadores.
+              </p>
+
+              <div className="hero-actions">
+                <Link
+                  href="/treinamentos/pacientes"
+                  className="button button-primary"
+                >
+                  Quero cuidar da minha saúde
+                  <ArrowIcon />
+                </Link>
+
+                <Link
+                  href="/treinamentos/fisioterapeutas"
+                  className="button button-secondary"
+                >
+                  Sou fisioterapeuta
+                </Link>
+              </div>
+
+              <div className="hero-trust">
+                <div>
+                  <CheckIcon />
+                  Informação acessível
+                </div>
+
+                <div>
+                  <CheckIcon />
+                  Experiência clínica real
+                </div>
+
+                <div>
+                  <CheckIcon />
+                  Sem promessas milagrosas
+                </div>
+              </div>
+            </div>
+
+            <div className="hero-visual">
+              <div className="hero-panel">
+                <span className="hero-panel-label">Um ecossistema completo</span>
+
+                <h2>Cuidado, conhecimento e tecnologia conectados.</h2>
+
+                <div className="ecosystem-list">
+                  <div className="ecosystem-item">
+                    <span>01</span>
+                    <div>
+                      <strong>Conteúdo</strong>
+                      <p>Artigos e vídeos gratuitos para começar.</p>
+                    </div>
+                  </div>
+
+                  <div className="ecosystem-item">
+                    <span>02</span>
+                    <div>
+                      <strong>Treinamentos</strong>
+                      <p>Jornadas estruturadas para pacientes e profissionais.</p>
+                    </div>
+                  </div>
+
+                  <div className="ecosystem-item">
+                    <span>03</span>
+                    <div>
+                      <strong>Atendimento</strong>
+                      <p>Avaliação e acompanhamento individualizados.</p>
+                    </div>
+                  </div>
+
+                  <div className="ecosystem-item">
+                    <span>04</span>
+                    <div>
+                      <strong>Tecnologia</strong>
+                      <p>Soluções que ajudam pessoas a cuidar melhor.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="floating-card floating-card-top">
+                <span>Para pacientes</span>
+                <strong>Mais clareza. Menos medo.</strong>
+              </div>
+
+              <div className="floating-card floating-card-bottom">
+                <span>Para profissionais</span>
+                <strong>Mais conhecimento. Mais evolução.</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="authority-strip">
+          <div className="container authority-grid">
+            {authorityItems.map((item) => (
+              <div className="authority-item" key={item.label}>
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="section section-white" id="artigos">
+          <div className="container">
+            <div className="section-heading">
+              <div>
+                <span className="eyebrow">Artigos e orientações</span>
+                <h2>Conhecimento para ajudar você a tomar melhores decisões.</h2>
+              </div>
+
+              <Link href="/artigos" className="text-link">
+                Ver todos os artigos
+                <ArrowIcon />
+              </Link>
+            </div>
+
+            <div className="article-grid">
+              {articles.map((article, index) => (
+                <article className="article-card" key={article.title}>
+                  <div className={`article-visual article-visual-${index + 1}`}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                  </div>
+
+                  <div className="article-content">
+                    <span className="article-category">{article.category}</span>
+
+                    <h3>{article.title}</h3>
+
+                    <p>{article.description}</p>
+
+                    <Link href={article.href}>
+                      Ler artigo
+                      <ArrowIcon />
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section training-section">
+          <div className="container">
+            <div className="centered-heading">
+              <span className="eyebrow">Treinamentos</span>
+              <h2>Escolha o caminho mais adequado para você.</h2>
+              <p>
+                Conteúdos estruturados para quem busca cuidar melhor da própria
+                saúde ou evoluir profissionalmente.
+              </p>
+            </div>
+
+            <div className="training-grid">
+              {trainingPaths.map((path, index) => (
+                <article
+                  className={`training-card training-card-${index + 1}`}
+                  key={path.title}
+                >
+                  <span className="training-number">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <span className="training-eyebrow">{path.eyebrow}</span>
+
+                  <h3>{path.title}</h3>
+
+                  <p>{path.description}</p>
+
+                  <Link href={path.href} className="button training-button">
+                    {path.button}
+                    <ArrowIcon />
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-white">
+          <div className="container">
+            <div className="section-heading technology-heading">
+              <div>
+                <span className="eyebrow">Tecnologia em saúde</span>
+                <h2>Soluções criadas para simplificar o cuidado.</h2>
+              </div>
+
+              <p>
+                Projetos que transformam necessidades reais em ferramentas
+                acessíveis para famílias, cuidadores e profissionais.
+              </p>
+            </div>
+
+            <div className="technology-grid">
+              {technologyItems.map((item, index) => (
+                <article className="technology-card" key={item.name}>
+                  <div className={`technology-icon technology-icon-${index + 1}`}>
+                    {index === 0 ? "A" : "F"}
+                  </div>
+
+                  <div className="technology-content">
+                    <span>{item.audience}</span>
+                    <h3>{item.name}</h3>
+                    <h4>{item.title}</h4>
+                    <p>{item.description}</p>
+
+                    <Link href={item.href}>
+                      Conhecer o projeto
+                      <ArrowIcon />
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section about-section">
+          <div className="container about-grid">
+            <div className="about-visual">
+              <div className="about-monogram">FE</div>
+
+              <div className="about-detail">
+                <span>Fisioterapia</span>
+                <span>Educação</span>
+                <span>Tecnologia</span>
+              </div>
+            </div>
+
+            <div className="about-content">
+              <span className="eyebrow">Sobre o Dr. Frank Eduardo</span>
+
+              <h2>
+                Experiência clínica transformada em conhecimento acessível.
+              </h2>
+
+              <p>
+                Fisioterapeuta desde 2009, Frank Eduardo atua no cuidado de
+                pessoas com dor e alterações do movimento, unindo experiência
+                clínica, terapia manual e educação em saúde.
+              </p>
+
+              <p>
+                Seu trabalho também se estende à formação profissional, criação
+                de conteúdos, desenvolvimento de tecnologias e construção de
+                soluções que ajudam pacientes, famílias e fisioterapeutas.
+              </p>
+
+              <Link href="/sobre" className="button button-secondary">
+                Conhecer minha trajetória
+                <ArrowIcon />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="final-cta">
+          <div className="container final-cta-content">
+            <span>Conhecimento que transforma vidas</span>
+
+            <h2>
+              O primeiro passo para cuidar melhor começa pela informação.
+            </h2>
+
+            <p>
+              Explore os conteúdos, conheça os treinamentos ou encontre o
+              caminho mais adequado para você.
+            </p>
+
+            <div className="final-cta-actions">
+              <Link href="/artigos" className="button button-light">
+                Explorar artigos
+              </Link>
+
+              <Link href="/treinamentos" className="button button-outline-light">
+                Conhecer treinamentos
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="site-footer">
+        <div className="container footer-grid">
+          <div className="footer-brand">
+            <Link href="/" className="brand brand-footer">
+              <span className="brand-mark">FE</span>
+
+              <span className="brand-copy">
+                <strong>Dr. Frank Eduardo</strong>
+                <small>Educação em saúde</small>
+              </span>
+            </Link>
+
+            <p>
+              Conteúdo, atendimento, treinamentos e tecnologia para transformar
+              a forma como pessoas cuidam da saúde.
+            </p>
+          </div>
+
+          <div className="footer-column">
+            <strong>Conteúdo</strong>
+            <Link href="/artigos">Artigos</Link>
+            <Link href="/treinamentos/pacientes">Para pacientes</Link>
+            <Link href="/treinamentos/fisioterapeutas">
+              Para fisioterapeutas
+            </Link>
+          </div>
+
+          <div className="footer-column">
+            <strong>Soluções</strong>
+            <Link href="/consultorio">Consultório</Link>
+            <Link href="/tecnologia/amparo-care">Amparo Care</Link>
+            <Link href="/tecnologia/fisioclinic">FisioClinic</Link>
+          </div>
+
+          <div className="footer-column">
+            <strong>Institucional</strong>
+            <Link href="/sobre">Sobre</Link>
+            <Link href="/contato">Contato</Link>
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://www.youtube.com/@professorfisio"
+              target="_blank"
+              rel="noreferrer"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              YouTube
+            </a>
+          </div>
+        </div>
+
+        <div className="container footer-bottom">
+          <p>
+            © {new Date().getFullYear()} Dr. Frank Eduardo. Todos os direitos
+            reservados.
+          </p>
+
+          <p>
+            O conteúdo deste site é educativo e não substitui avaliação
+            individualizada.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </footer>
     </div>
   );
 }
