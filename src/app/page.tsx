@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PageSchema from "@/components/schema/PageSchema";
 
 const articles = [
   {
@@ -113,7 +114,16 @@ function CheckIcon() {
 }
 
 export default function Home() {
-  return (
+    return (
+      <>
+        <PageSchema
+        title="Dr. Frank Eduardo | Educação em Saúde"
+        description="Conteúdos, treinamentos, atendimento e tecnologia para pacientes, fisioterapeutas, famílias e cuidadores."
+        path="/"
+        breadcrumb={[
+          { name: "Início", url: "/" }
+        ]}
+        />     
     <div className="site-shell">
       <header className="site-header">
         <div className="container header-content">
@@ -521,5 +531,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
