@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import CourseStructuredData from "@/components/CourseStructuredData";
 
 export const metadata: Metadata = {
   title: "Fibromialgia: Da Compreensão à Transformação",
@@ -213,7 +214,18 @@ function CheckoutButton({
 
 export default function FibromyalgiaTrainingPage() {
   return (
-    <div className="site-shell">
+    <>
+      <CourseStructuredData
+        name="Fibromialgia: Da Compreensão à Transformação"
+        description="Treinamento em educação em saúde desenvolvido para ajudar pessoas com fibromialgia a compreender melhor a condição e adotar estratégias relacionadas à dor, ao movimento, ao sono, às emoções e ao estilo de vida."
+        pathname="/treinamentos/fibromialgia"
+        image="/fibromialgia-capa.png"
+        price="39.90"
+        checkoutUrl={checkoutUrl}
+        audience="Pacientes, familiares e cuidadores interessados em educação em saúde"
+      />
+
+      <div className="site-shell">
       <header className="site-header">
         <div className="container header-content">
           <Link href="/" className="brand" aria-label="Página inicial">
@@ -750,6 +762,7 @@ export default function FibromyalgiaTrainingPage() {
           </p>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }
