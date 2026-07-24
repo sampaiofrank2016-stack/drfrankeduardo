@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import PageSchema from "@/components/schema/PageSchema";
 
@@ -64,14 +65,6 @@ const trainingPaths = [
 ];
 
 const technologyItems = [
-  {
-    name: "Amparo Care",
-    audience: "Para famílias e cuidadores",
-    title: "Mais organização e segurança no cuidado de quem você ama",
-    description:
-      "Medicamentos, consultas, alertas e informações importantes reunidos em uma solução simples para o dia a dia.",
-    href: "/tecnologia/amparo-care",
-  },
   {
     name: "FisioClinic",
     audience: "Para fisioterapeutas",
@@ -385,7 +378,7 @@ export default function Home() {
               {technologyItems.map((item, index) => (
                 <article className="technology-card" key={item.name}>
                   <div className={`technology-icon technology-icon-${index + 1}`}>
-                    {index === 0 ? "A" : "F"}
+                    F
                   </div>
 
                   <div className="technology-content">
@@ -407,13 +400,52 @@ export default function Home() {
 
         <section className="section about-section">
           <div className="container about-grid">
-            <div className="about-visual">
-              <div className="about-monogram">FE</div>
+            <div className="relative min-h-[540px] overflow-hidden rounded-[34px] border border-white/15 bg-[#10261f] shadow-2xl shadow-black/20 sm:min-h-[620px]">
+              <Image
+                src="/images/frank-eduardo-sobre.jpg"
+                alt="Dr. Frank Eduardo, fisioterapeuta, educador e desenvolvedor de soluções em saúde"
+                fill
+                sizes="(max-width: 900px) 100vw, 42vw"
+                className="object-cover object-[center_38%]"
+              />
 
-              <div className="about-detail">
-                <span>Fisioterapia</span>
-                <span>Educação</span>
-                <span>Tecnologia</span>
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-[#0d211a] via-[#0d211a]/20 to-transparent"
+                aria-hidden="true"
+              />
+
+              <div className="absolute inset-x-0 bottom-0 z-10 p-7 sm:p-9">
+                <span className="inline-flex rounded-full border border-white/20 bg-black/20 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white/80 backdrop-blur-sm">
+                  Desde 2009
+                </span>
+
+                <strong className="mt-4 block text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                  Frank Eduardo
+                </strong>
+
+                <p className="mt-2 text-sm leading-6 text-white/75 sm:text-base">
+                  Fisioterapeuta • Educador • Tecnologia em saúde
+                </p>
+
+                <div className="mt-6 grid grid-cols-2 gap-3 border-t border-white/15 pt-5">
+                  <div>
+                    <strong className="block text-2xl font-semibold text-white">
+                      17+
+                    </strong>
+                    <span className="mt-1 block text-xs leading-5 text-white/65 sm:text-sm">
+                      anos de experiência
+                    </span>
+                  </div>
+
+                  <div>
+                    <strong className="block text-2xl font-semibold text-white">
+                      20 mil+
+                    </strong>
+                    <span className="mt-1 block text-xs leading-5 text-white/65 sm:text-sm">
+                      pacientes atendidos
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -500,7 +532,6 @@ export default function Home() {
           <div className="footer-column">
             <strong>Soluções</strong>
             <Link href="/consultorio">Consultório</Link>
-            <Link href="/tecnologia/amparo-care">Amparo Care</Link>
             <Link href="/tecnologia/fisioclinic">FisioClinic</Link>
           </div>
 
