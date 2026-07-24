@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     images: [
       {
-        url: "/images/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Dr. Frank Eduardo - Educação em Saúde",
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     title: "Dr. Frank Eduardo | Educação em Saúde",
     description:
       "Conteúdos, treinamentos, atendimento e tecnologia para pacientes e fisioterapeutas.",
-    images: ["/images/og-image.png"],
+    images: ["/og-image.png"],
   },
 
   formatDetection: {
