@@ -12,6 +12,7 @@ export type TrainingProduct = {
   status: "available" | "soon";
   featured?: boolean;
   highlights: string[];
+  buttonLabel?: string;
 };
 
 type TrainingCatalogPageProps = {
@@ -273,7 +274,7 @@ export default function TrainingCatalogPage({
                   )}
 
                   <Link href={product.href} className="catalog-product-button">
-                    Conhecer treinamento
+                    {product.buttonLabel ?? "Conhecer treinamento"}
                     <ArrowIcon />
                   </Link>
                 </article>
@@ -336,10 +337,7 @@ export default function TrainingCatalogPage({
             <p>{finalDescription}</p>
 
             <div className="catalog-final-actions">
-              <Link
-                href={primaryActionHref}
-                className="button button-light"
-              >
+              <Link href={primaryActionHref} className="button button-light">
                 {primaryActionLabel}
               </Link>
 
@@ -392,6 +390,7 @@ export default function TrainingCatalogPage({
             <strong>Institucional</strong>
             <Link href="/sobre">Sobre</Link>
             <Link href="/contato">Contato</Link>
+
             <a
               href="https://www.youtube.com/@professorfisio"
               target="_blank"

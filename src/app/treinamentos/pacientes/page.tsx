@@ -29,19 +29,18 @@ const products: TrainingProduct[] = [
   },
   {
     category: "Guia educativo",
-    title: "Primeiros passos para entender a fibromialgia",
-    description:
-      "Um material introdutório e objetivo para quem acabou de receber o diagnóstico ou deseja compreender melhor essa condição.",
-    format: "Guia digital",
+    title: "Fibromialgia, Ansiedade e Depressão",
+    description: "Um kit educativo digital para compreender a relação entre dor crônica, saúde emocional e bem-estar, com ebook, Chek List e aula bônus.",
+    format: "Ebook + bônus",
     access: "Imediato",
     price: "R$ 4,99",
-    href: "/treinamentos/pacientes/guia-fibromialgia",
+    href: "/treinamentos/pacientes/fibromialgia/guia",
     status: "available",
     highlights: [
-      "Leitura rápida",
-      "Conteúdo introdutório",
-      "Acesso digital",
-      "Investimento acessível",
+    "Ebook",
+    "Chek List de bem-estar",
+    "Aula bônus O SISTEMA",
+    "Acesso imediato",
     ],
   },
   {
