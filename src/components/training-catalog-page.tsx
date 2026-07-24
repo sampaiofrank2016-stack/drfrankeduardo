@@ -12,7 +12,7 @@ export type TrainingProduct = {
   status: "available" | "soon";
   featured?: boolean;
   highlights: string[];
-  buttonLabel: string;
+  buttonLabel?: string;
 };
 
 type TrainingCatalogPageProps = {
@@ -274,7 +274,7 @@ export default function TrainingCatalogPage({
                   )}
 
                   <Link href={product.href} className="catalog-product-button">
-                    {product.buttonLabel}
+                    {product.buttonLabel ?? "Conhecer treinamento"}
                     <ArrowIcon />
                   </Link>
                 </article>
