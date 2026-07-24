@@ -402,7 +402,7 @@ export default function Home() {
           <div className="container about-grid">
             <div className="relative min-h-[540px] overflow-hidden rounded-[34px] border border-white/15 bg-[#10261f] shadow-2xl shadow-black/20 sm:min-h-[620px]">
               <Image
-                src="/images/frank-eduardo-sobre.jpg"
+                src="/images/frank-eduardo-sobre.jpeg"
                 alt="Dr. Frank Eduardo, fisioterapeuta, educador e desenvolvedor de soluções em saúde"
                 fill
                 sizes="(max-width: 900px) 100vw, 42vw"
