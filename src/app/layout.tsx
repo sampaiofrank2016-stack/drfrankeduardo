@@ -77,6 +77,14 @@ export const metadata: Metadata = {
     siteName: "Dr. Frank Eduardo",
     type: "website",
     locale: "pt_BR",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Dr. Frank Eduardo - Educação em Saúde",
+      },
+    ],
   },
 
   twitter: {
@@ -84,6 +92,7 @@ export const metadata: Metadata = {
     title: "Dr. Frank Eduardo | Educação em Saúde",
     description:
       "Conteúdos, treinamentos, atendimento e tecnologia para pacientes e fisioterapeutas.",
+    images: ["/og-image.png"],
   },
 
   formatDetection: {
