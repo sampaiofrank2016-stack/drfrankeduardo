@@ -33,7 +33,6 @@ const products: TrainingProduct[] = [
     description: "Um kit educativo digital para compreender a relação entre dor crônica, saúde emocional e bem-estar, com ebook, Chek List e aula bônus.",
     format: "Ebook + bônus",
     access: "Imediato",
-    price: "R$ 4,99",
     href: "/treinamentos/pacientes/fibromialgia/guia",
     status: "available",
     highlights: [
