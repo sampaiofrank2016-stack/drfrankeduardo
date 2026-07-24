@@ -20,6 +20,7 @@ const products: TrainingProduct[] = [
     href: "/treinamentos/pacientes/fibromialgia",
     status: "available",
     featured: true,
+    buttonLabel: "Conhecer treinamento",
     highlights: [
       "Compreensão da dor",
       "Orientações para o cotidiano",
@@ -35,6 +36,7 @@ const products: TrainingProduct[] = [
     access: "Imediato",
     href: "/treinamentos/pacientes/fibromialgia/guia",
     status: "available",
+    buttonLabel: "Conhecer o guia",
     highlights: [
     "Ebook",
     "Chek List de bem-estar",
