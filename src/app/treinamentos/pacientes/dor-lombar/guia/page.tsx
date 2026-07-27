@@ -618,7 +618,7 @@ export default function LowBackPainGuidePage() {
               href={CHECKOUT_URL}
               target="_blank"
               rel="noreferrer"
-              className="mt-8 inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-white px-8 font-bold text-emerald-950 transition hover:-translate-y-0.5"
+              className="mt-8 inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-white px-6 font-bold !text-emerald-950 transition hover:-translate-y-0.5"
             >
               Quero acessar por R$ 4,99
               <ArrowIcon />
