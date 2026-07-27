@@ -15,7 +15,7 @@ const products: TrainingProduct[] = [
     title: "Programa Fibromialgia",
     description:
       "Uma jornada educativa para compreender a fibromialgia, reconhecer fatores que influenciam os sintomas e construir uma relação mais segura com o próprio corpo.",
-    format: "Treinamento Online",
+    format: "Treinamento online",
     access: "Imediato",
     href: "/treinamentos/pacientes/fibromialgia",
     status: "available",
@@ -31,17 +31,35 @@ const products: TrainingProduct[] = [
   {
     category: "Guia educativo",
     title: "Fibromialgia, Ansiedade e Depressão",
-    description: "Um kit educativo digital para compreender a relação entre dor crônica, saúde emocional e bem-estar, com ebook, Chek List e aula bônus.",
+    description:
+      "Um kit educativo digital para compreender a relação entre dor crônica, saúde emocional e bem-estar, com ebook, Chek List e aula bônus.",
     format: "Ebook + bônus",
     access: "Imediato",
     href: "/treinamentos/pacientes/fibromialgia/guia",
     status: "available",
     buttonLabel: "Conhecer o guia",
     highlights: [
-    "Ebook",
-    "Chek List de bem-estar",
-    "Aula bônus O SISTEMA",
-    "Acesso imediato",
+      "Ebook",
+      "Chek List de bem-estar",
+      "Aula bônus O SISTEMA",
+      "Acesso imediato",
+    ],
+  },
+  {
+    category: "Guia educativo",
+    title: "7 Passos para Aliviar a Dor Lombar",
+    description:
+      "Um guia prático para compreender melhor a dor lombar e conhecer exercícios, estratégias de autocuidado e medidas de prevenção para o dia a dia.",
+    format: "Ebook digital",
+    access: "Imediato",
+    href: "/treinamentos/pacientes/dor-lombar/guia",
+    status: "available",
+    buttonLabel: "Conhecer o guia",
+    highlights: [
+      "Guia com 7 capítulos",
+      "Exercícios terapêuticos",
+      "Estratégias de autocuidado",
+      "Prevenção da dor lombar",
     ],
   },
   {
