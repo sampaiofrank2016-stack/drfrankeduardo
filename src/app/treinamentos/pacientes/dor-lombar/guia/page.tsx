@@ -518,20 +518,14 @@ export default function LowBackPainGuidePage() {
 
         <section className="py-16 md:py-24">
           <div className="container mx-auto grid items-center gap-10 px-5 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="flex min-h-72 items-center justify-center rounded-[2rem] bg-emerald-950 text-white">
-              <div className="text-center">
-                <span className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border border-white/30 text-2xl font-bold">
-                  FE
-                </span>
-
-                <strong className="mt-5 block text-xl">
-                  Dr. Frank Eduardo
-                </strong>
-
-                <small className="mt-2 block text-emerald-200">
-                  Fisioterapeuta e educador em saúde
-                </small>
-              </div>
+            <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-[2rem] bg-emerald-950">
+              <Image
+                src="/images/frank-eduardo-profissional.png"
+                alt="Dr. Frank Eduardo, fisioterapeuta e autor do ebook"
+                width={800}
+                height={1000}
+                className="h-auto w-full object-cover"
+              />
             </div>
 
             <div>
