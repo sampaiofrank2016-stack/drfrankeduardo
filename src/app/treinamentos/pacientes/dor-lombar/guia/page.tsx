@@ -222,7 +222,7 @@ export default function LowBackPainGuidePage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href={CHECKOUT_URL}
-                  className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-white px-8 font-bold text-emerald-950 transition hover:-translate-y-0.5"
+                  className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-white px-8 font-bold !text-emerald-950 transition hover:-translate-y-0.5"
                 >
                   Quero meu ebook por R$ 4,99
                   <ArrowIcon />
