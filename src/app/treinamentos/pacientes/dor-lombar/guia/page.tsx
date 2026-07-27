@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 const CHECKOUT_URL = "https://pay.hotmart.com/Y84090252C";
@@ -207,9 +208,9 @@ export default function LowBackPainGuidePage() {
                 7 Passos para Aliviar a Dor Lombar
               </h1>
 
-              <p className="mt-5 max-w-2xl text-xl font-medium text-emerald-100">
-                Estratégias práticas e eficazes para compreender melhor sua
-                dor e cuidar da saúde da coluna.
+              <p className="mt-5 max-w-2xl text-xl font-semibold leading-8 text-emerald-100">
+                Entenda por que sua coluna dói e conheça estratégias práticas
+                para cuidar melhor da região lombar.
               </p>
 
               <p className="mt-6 max-w-2xl text-base leading-8 text-emerald-50/85 md:text-lg">
@@ -223,7 +224,7 @@ export default function LowBackPainGuidePage() {
                   href={CHECKOUT_URL}
                   className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-white px-8 font-bold text-emerald-950 transition hover:-translate-y-0.5"
                 >
-                  Quero acessar o guia
+                  Quero meu ebook por R$ 4,99
                   <ArrowIcon />
                 </a>
 
@@ -243,65 +244,55 @@ export default function LowBackPainGuidePage() {
             </div>
 
             <div className="mx-auto w-full max-w-md">
-              <div className="relative rounded-[2rem] bg-white/10 p-5 shadow-2xl backdrop-blur">
-                <div className="rounded-[1.5rem] bg-gradient-to-b from-sky-500 to-sky-800 px-8 py-12 text-white shadow-xl">
-                  <span className="text-xs font-bold uppercase tracking-[0.22em] text-sky-100">
-                    Conteúdo exclusivo
-                  </span>
-
-                  <div className="my-10 border-y border-white/30 py-8">
-                    <h2 className="text-4xl font-bold leading-tight">
-                      7 Passos para Aliviar a Dor Lombar
-                    </h2>
-
-                    <p className="mt-4 text-xl italic text-sky-100">
-                      Estratégias práticas e eficazes
-                    </p>
-                  </div>
-
-                  <span className="text-sm font-semibold">
-                    Professor Fisio
-                  </span>
-                </div>
+              <div className="relative">
+                <div className="absolute inset-10 rounded-full bg-emerald-400/20 blur-3xl" />
+                <Image
+                  src="/images/ebook-7-passos-dor-lombar.png"
+                  alt="Capa do ebook 7 Passos para Aliviar a Dor Lombar"
+                  width={1100}
+                  height={1500}
+                  priority
+                  className="relative h-auto w-full object-contain drop-shadow-2xl"
+                />
               </div>
             </div>
           </div>
         </section>
 
         <section className="py-16 md:py-24">
-          <div className="container mx-auto px-5">
-            <div className="mx-auto max-w-3xl text-center">
+          <div className="container mx-auto grid gap-12 px-5 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
               <span className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-700">
-                Conhecimento para agir melhor
+                Você se identifica?
               </span>
 
               <h2 className="mt-4 text-3xl font-bold leading-tight md:text-5xl">
-                Dor lombar não precisa ser enfrentada apenas com medo e
-                insegurança.
+                A dor lombar pode gerar insegurança até nas tarefas mais simples.
               </h2>
 
               <p className="mt-6 text-lg leading-8 text-slate-600">
-                Compreender os fatores relacionados à dor e conhecer
-                possibilidades de cuidado pode ajudar você a participar de
-                forma mais consciente das decisões sobre sua saúde.
+                Quando falta informação, é comum surgir medo de se movimentar,
+                dúvidas sobre exames e incerteza sobre o que fazer.
               </p>
             </div>
 
-            <div className="mt-12 grid gap-6 md:grid-cols-3">
-              {benefits.map((benefit) => (
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                "A dor aparece ao levantar, caminhar ou permanecer muito tempo sentado.",
+                "Você sente receio de realizar exercícios e piorar o desconforto.",
+                "As crises melhoram por alguns dias, mas voltam com frequência.",
+                "Você já fez exames, porém ainda não entende claramente a origem da dor.",
+                "Não sabe quais hábitos podem ajudar ou prejudicar a região lombar.",
+                "Deseja compreender melhor quando é necessário procurar atendimento.",
+              ].map((item, index) => (
                 <article
-                  key={benefit.number}
-                  className="rounded-3xl border border-slate-200 p-7"
+                  key={item}
+                  className="rounded-2xl border border-slate-200 bg-slate-50 p-6"
                 >
                   <span className="text-sm font-bold text-emerald-700">
-                    {benefit.number}
+                    {String(index + 1).padStart(2, "0")}
                   </span>
-
-                  <h3 className="mt-5 text-xl font-bold">{benefit.title}</h3>
-
-                  <p className="mt-3 leading-7 text-slate-600">
-                    {benefit.description}
-                  </p>
+                  <p className="mt-4 leading-7 text-slate-700">{item}</p>
                 </article>
               ))}
             </div>
@@ -313,17 +304,16 @@ export default function LowBackPainGuidePage() {
             <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr]">
               <div>
                 <span className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-700">
-                  Dentro do ebook
+                  O método do guia
                 </span>
 
                 <h2 className="mt-4 text-3xl font-bold leading-tight md:text-5xl">
-                  Uma jornada organizada em 7 capítulos.
+                  Os 7 passos que conduzem o conteúdo.
                 </h2>
 
                 <p className="mt-6 text-lg leading-8 text-slate-600">
-                  O material conduz você desde a compreensão inicial da dor
-                  lombar até estratégias de movimento, autocuidado e
-                  prevenção.
+                  O material foi organizado para levar você da compreensão da dor
+                  até atitudes práticas de autocuidado e prevenção.
                 </p>
               </div>
 
@@ -544,7 +534,7 @@ export default function LowBackPainGuidePage() {
 
             <div>
               <span className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-700">
-                Sobre o autor
+                Por que escrevi este ebook
               </span>
 
               <h2 className="mt-4 text-3xl font-bold leading-tight md:text-5xl">
@@ -552,17 +542,87 @@ export default function LowBackPainGuidePage() {
               </h2>
 
               <p className="mt-6 text-lg leading-8 text-slate-600">
-                Frank Eduardo é fisioterapeuta, especialista em Osteopatia e
-                Quiropraxia, com ampla experiência no atendimento de pessoas
-                com dores musculoesqueléticas.
+                Sou Frank Eduardo, fisioterapeuta, especialista em Osteopatia e
+                Quiropraxia, com mais de 17 anos de experiência clínica no
+                atendimento de pessoas com dores musculoesqueléticas.
               </p>
 
               <p className="mt-4 text-lg leading-8 text-slate-600">
-                Seu trabalho une avaliação clínica, terapia manual e educação
-                em saúde para ajudar pacientes a compreender melhor o próprio
-                corpo e participar de forma mais ativa do cuidado.
+                Ao longo da prática clínica percebi que muitas pessoas convivem
+                não apenas com a dor, mas também com dúvidas, medo de se
+                movimentar e dificuldade para compreender o próprio quadro.
+              </p>
+
+              <p className="mt-4 text-lg leading-8 text-slate-600">
+                Este guia foi criado para traduzir informações importantes em
+                uma linguagem clara, prática e responsável.
               </p>
             </div>
+          </div>
+        </section>
+
+        <section className="bg-slate-50 py-16 md:py-24">
+          <div className="container mx-auto grid gap-12 px-5 lg:grid-cols-[0.75fr_1.25fr]">
+            <div>
+              <span className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-700">
+                Perguntas frequentes
+              </span>
+
+              <h2 className="mt-4 text-3xl font-bold leading-tight md:text-5xl">
+                Tire suas principais dúvidas.
+              </h2>
+            </div>
+
+            <div className="grid gap-4">
+              {[
+                ["O que receberei após a compra?", "Você receberá o ebook digital 7 Passos para Aliviar a Dor Lombar, com 26 páginas, exercícios ilustrados e orientações de autocuidado e prevenção."],
+                ["Como receberei o acesso?", "Após a confirmação do pagamento, a Hotmart enviará as informações de acesso para o e-mail utilizado na compra."],
+                ["O acesso é imediato?", "Sim. Depois que o pagamento for confirmado, você poderá acessar o material digital."],
+                ["Posso acessar pelo celular?", "Sim. O ebook pode ser acessado pelo celular, tablet ou computador."],
+                ["Este ebook substitui consulta ou tratamento?", "Não. O conteúdo possui finalidade educativa e não substitui avaliação, diagnóstico, prescrição ou acompanhamento individualizado."],
+              ].map(([question, answer], index) => (
+                <details
+                  key={question}
+                  className="group rounded-2xl border border-slate-200 bg-white p-6"
+                >
+                  <summary className="flex cursor-pointer list-none items-center gap-4">
+                    <span className="text-sm font-bold text-emerald-700">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <strong className="flex-1">{question}</strong>
+                    <span className="text-2xl text-emerald-700 transition group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="mt-4 pl-10 leading-7 text-slate-600">{answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-emerald-950 py-16 text-center text-white md:py-24">
+          <div className="container mx-auto max-w-4xl px-5">
+            <span className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-300">
+              Seu primeiro passo pode começar hoje
+            </span>
+
+            <h2 className="mt-4 text-3xl font-bold leading-tight md:text-5xl">
+              Sua coluna acompanha você todos os dias.
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-emerald-100">
+              Invista alguns minutos para compreender melhor a dor lombar e
+              conhecer estratégias mais conscientes de cuidado.
+            </p>
+
+            <a
+              href={CHECKOUT_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-8 inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-white px-8 font-bold text-emerald-950 transition hover:-translate-y-0.5"
+            >
+              Quero acessar por R$ 4,99
+              <ArrowIcon />
+            </a>
           </div>
         </section>
       </main>
