@@ -633,7 +633,7 @@ export default function NotalgiaParestesicaPage() {
                 </div>
 
                 <a
-                  href="https://www.youtube.com/@professorfisio"
+                  href="https://www.youtube.com/watch?v=O4NvDAJMNLw&feature=youtu.be"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
