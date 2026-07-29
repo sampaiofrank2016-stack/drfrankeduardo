@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageSchema from "@/components/schema/PageSchema";
+import BookLaunchPopup from "@/components/BookLaunchPopup";
 
 const articles = [
   {
@@ -116,7 +117,9 @@ export default function Home() {
         breadcrumb={[
           { name: "Início", url: "/" }
         ]}
-        />     
+        />
+
+        <BookLaunchPopup />
 
       <main>
         <section className="hero">
