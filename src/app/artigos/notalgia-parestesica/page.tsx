@@ -555,7 +555,7 @@ export default function NotalgiaParestesicaPage() {
                   </p>
                 </div>
 
-                <Link href="/livros/por-que-depois-dos-enta">
+                <Link href="/livros/depois-dos-enta">
                   Conhecer o livro
                   <ArrowIcon />
                 </Link>
