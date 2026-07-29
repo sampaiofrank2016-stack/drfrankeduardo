@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./artigos.module.css";
@@ -101,6 +102,9 @@ const articles = [
     date: "28 jul 2026",
     featured: true,
     index: "01",
+    image: "/images/artigos/notalgia-parestesica.png",
+    imageAlt:
+      "Notalgia parestésica com destaque para a região entre a coluna e a escápula",
   },
 ];
 
@@ -292,9 +296,18 @@ export default function ArticlesPage() {
                 className={styles.featuredVisual}
                 aria-label={`Ler: ${featuredArticle.title}`}
               >
-                <div className={styles.visualTexture} />
-                <span className={styles.visualLabel}>Região interescapular</span>
-                <strong>NP</strong>
+                <Image
+                  src={featuredArticle.image}
+                  alt={featuredArticle.imageAlt}
+                  fill
+                  priority
+                  sizes="(max-width: 760px) 100vw, 45vw"
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                  }}
+                />
+
                 <small>{featuredArticle.index}</small>
               </Link>
 
