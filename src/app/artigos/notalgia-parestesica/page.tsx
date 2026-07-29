@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./artigo.module.css";
@@ -48,9 +49,9 @@ export const metadata: Metadata = {
     ],
     images: [
       {
-        url: "/images/artigos/notalgia-parestesica.webp",
-        width: 1200,
-        height: 630,
+        url: "/images/artigos/notalgia-parestesica-artigo.png",
+        width: 1536,
+        height: 1024,
         alt: "Notalgia parestésica na região entre as escápulas",
       },
     ],
@@ -61,7 +62,7 @@ export const metadata: Metadata = {
       "Notalgia Parestésica: sintomas, diagnóstico, tratamento e tem cura?",
     description:
       "Entenda por que a coceira persistente entre as escápulas pode ter origem neuropática.",
-    images: ["/images/artigos/notalgia-parestesica.webp"],
+    images: ["/images/artigos/notalgia-parestesica-artigo.png"],
   },
 };
 
@@ -148,7 +149,7 @@ export default function NotalgiaParestesicaPage() {
         url: `${siteUrl}/og-image.png`,
       },
     },
-    image: `${siteUrl}/images/artigos/notalgia-parestesica.webp`,
+    image: `${siteUrl}/images/artigos/notalgia-parestesica-artigo.png`,
     about: {
       "@type": "MedicalCondition",
       name: "Notalgia parestésica",
@@ -297,10 +298,17 @@ export default function NotalgiaParestesicaPage() {
 
           <div className="container">
             <div className={styles.coverVisual}>
-              <div className={styles.coverTexture} />
-              <div className={styles.coverBodyShape} />
-              <span>Região interescapular</span>
-              <strong>NP</strong>
+              <Image
+                src="/images/artigos/notalgia-parestesica-artigo.png"
+                alt="Notalgia parestésica com destaque para a região entre a coluna e a escápula"
+                fill
+                priority
+                sizes="(max-width: 680px) calc(100vw - 28px), 1180px"
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center",
+                }}
+              />
             </div>
           </div>
 
