@@ -109,56 +109,6 @@ export default function TecnologiaPage() {
       />
 
       <main className="min-h-screen bg-white text-slate-950">
-        <header className="border-b border-slate-200 bg-white">
-          <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
-            <Link
-              href="/"
-              className="text-lg font-bold tracking-tight text-slate-950"
-            >
-              Dr. Frank Eduardo
-            </Link>
-
-            <nav
-              aria-label="Navegação principal"
-              className="hidden items-center gap-7 text-sm font-medium text-slate-600 md:flex"
-            >
-              <Link href="/" className="transition hover:text-blue-700">
-                Início
-              </Link>
-
-              <Link href="/sobre" className="transition hover:text-blue-700">
-                Sobre
-              </Link>
-
-              <Link
-                href="/consultorio"
-                className="transition hover:text-blue-700"
-              >
-                Consultório
-              </Link>
-
-              <Link
-                href="/treinamentos"
-                className="transition hover:text-blue-700"
-              >
-                Treinamentos
-              </Link>
-
-              <Link href="/tecnologia" className="font-semibold text-blue-700">
-                Tecnologia
-              </Link>
-            </nav>
-
-            <a
-              href={cadastroUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl bg-blue-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-800"
-            >
-              Testar FisioClinic
-            </a>
-          </div>
-        </header>
 
         <section className="relative overflow-hidden bg-slate-950">
           <div
@@ -421,38 +371,6 @@ export default function TecnologiaPage() {
             </p>
           </div>
         </section>
-
-        <footer className="border-t border-slate-200 bg-slate-950">
-          <div className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-10 text-sm text-slate-400 md:flex-row md:items-center md:justify-between lg:px-8">
-            <div>
-              <strong className="text-base text-white">Dr. Frank Eduardo</strong>
-              <p className="mt-1">
-                Educação, saúde, atendimento e tecnologia.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-5">
-              <Link href="/" className="transition hover:text-white">
-                Início
-              </Link>
-
-              <Link href="/sobre" className="transition hover:text-white">
-                Sobre
-              </Link>
-
-              <Link href="/consultorio" className="transition hover:text-white">
-                Consultório
-              </Link>
-
-              <Link
-                href="/treinamentos"
-                className="transition hover:text-white"
-              >
-                Treinamentos
-              </Link>
-            </div>
-          </div>
-        </footer>
       </main>
     </>
   );

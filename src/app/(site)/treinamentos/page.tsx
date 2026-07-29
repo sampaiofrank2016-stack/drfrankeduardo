@@ -102,52 +102,7 @@ function CheckIcon() {
 
 export default function TrainingsPage() {
   return (
-    <div className="site-shell">
-      <header className="site-header">
-        <div className="container header-content">
-          <Link href="/" className="brand" aria-label="Página inicial">
-            <span className="brand-mark">FE</span>
-
-            <span className="brand-copy">
-              <strong>Dr. Frank Eduardo</strong>
-              <small>Educação em saúde</small>
-            </span>
-          </Link>
-
-          <nav className="desktop-navigation" aria-label="Navegação principal">
-            <Link href="/">Início</Link>
-            <Link href="/artigos">Artigos</Link>
-            <Link href="/treinamentos">Treinamentos</Link>
-            <Link href="/tecnologia">Tecnologia</Link>
-            <Link href="/consultorio">Consultório</Link>
-            <Link href="/sobre">Sobre</Link>
-          </nav>
-
-          <Link href="/consultorio" className="header-cta">
-            Agendar consulta
-          </Link>
-
-          <details className="mobile-navigation">
-            <summary aria-label="Abrir menu">
-              <span />
-              <span />
-              <span />
-            </summary>
-
-            <div className="mobile-menu">
-              <Link href="/">Início</Link>
-              <Link href="/artigos">Artigos</Link>
-              <Link href="/treinamentos">Treinamentos</Link>
-              <Link href="/tecnologia">Tecnologia</Link>
-              <Link href="/consultorio">Consultório</Link>
-              <Link href="/sobre">Sobre</Link>
-              <Link href="/consultorio" className="mobile-menu-cta">
-                Agendar consulta
-              </Link>
-            </div>
-          </details>
-        </div>
-      </header>
+    <>
 
       <main>
         <section className="trainings-hero">
@@ -337,67 +292,6 @@ export default function TrainingsPage() {
           </div>
         </section>
       </main>
-
-      <footer className="site-footer">
-        <div className="container footer-grid">
-          <div className="footer-brand">
-            <Link href="/" className="brand brand-footer">
-              <span className="brand-mark">FE</span>
-
-              <span className="brand-copy">
-                <strong>Dr. Frank Eduardo</strong>
-                <small>Educação em saúde</small>
-              </span>
-            </Link>
-
-            <p>
-              Conteúdo, atendimento, treinamentos e tecnologia para transformar
-              a forma como pessoas cuidam da saúde.
-            </p>
-          </div>
-
-          <div className="footer-column">
-            <strong>Conteúdo</strong>
-            <Link href="/artigos">Artigos</Link>
-            <Link href="/treinamentos/pacientes">Para pacientes</Link>
-            <Link href="/treinamentos/fisioterapeutas">
-              Para fisioterapeutas
-            </Link>
-          </div>
-
-          <div className="footer-column">
-            <strong>Soluções</strong>
-            <Link href="/consultorio">Consultório</Link>
-            <Link href="/tecnologia/amparo-care">Amparo Care</Link>
-            <Link href="/tecnologia/fisioclinic">FisioClinic</Link>
-          </div>
-
-          <div className="footer-column">
-            <strong>Institucional</strong>
-            <Link href="/sobre">Sobre</Link>
-            <Link href="/contato">Contato</Link>
-            <a
-              href="https://www.youtube.com/@professorfisio"
-              target="_blank"
-              rel="noreferrer"
-            >
-              YouTube
-            </a>
-          </div>
-        </div>
-
-        <div className="container footer-bottom">
-          <p>
-            © {new Date().getFullYear()} Dr. Frank Eduardo. Todos os direitos
-            reservados.
-          </p>
-
-          <p>
-            O conteúdo deste site é educativo e não substitui avaliação
-            individualizada.
-          </p>
-        </div>
-      </footer>
-    </div>
+    </>
   );
 }
