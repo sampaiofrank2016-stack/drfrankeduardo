@@ -167,52 +167,7 @@ export default function ArticlesPage() {
   };
 
   return (
-    <div className="site-shell">
-      <header className="site-header">
-        <div className="container header-content">
-          <Link href="/" className="brand" aria-label="Ir para a página inicial">
-            <span className="brand-mark">FE</span>
-
-            <span className="brand-copy">
-              <strong>Dr. Frank Eduardo</strong>
-              <small>Educação em saúde</small>
-            </span>
-          </Link>
-
-          <nav className="desktop-navigation" aria-label="Navegação principal">
-            <Link href="/">Início</Link>
-            <Link href="/artigos" aria-current="page">
-              Artigos
-            </Link>
-            <Link href="/treinamentos">Treinamentos</Link>
-            <Link href="/sobre">Sobre</Link>
-            <Link href="/contato">Contato</Link>
-          </nav>
-
-          <Link href="/treinamentos" className="header-cta">
-            Ver treinamentos
-          </Link>
-
-          <details className="mobile-navigation">
-            <summary aria-label="Abrir menu">
-              <span />
-              <span />
-              <span />
-            </summary>
-
-            <nav className="mobile-menu" aria-label="Navegação para celular">
-              <Link href="/">Início</Link>
-              <Link href="/artigos">Artigos</Link>
-              <Link href="/treinamentos">Treinamentos</Link>
-              <Link href="/sobre">Sobre</Link>
-              <Link href="/contato">Contato</Link>
-              <Link href="/treinamentos" className="mobile-menu-cta">
-                Ver treinamentos
-              </Link>
-            </nav>
-          </details>
-        </div>
-      </header>
+    <>
 
       <main>
         <section className={styles.hero}>
@@ -424,66 +379,12 @@ export default function ArticlesPage() {
         </section>
       </main>
 
-      <footer className="site-footer">
-        <div className="container">
-          <div className="footer-grid">
-            <div className="footer-brand">
-              <Link href="/" className="brand brand-footer">
-                <span className="brand-mark">FE</span>
-
-                <span className="brand-copy">
-                  <strong>Dr. Frank Eduardo</strong>
-                  <small>Educação em saúde</small>
-                </span>
-              </Link>
-
-              <p>
-                Educação em saúde para quem quer viver melhor, atender melhor e
-                transformar mais vidas.
-              </p>
-            </div>
-
-            <div className="footer-column">
-              <strong>Conteúdo</strong>
-              <Link href="/artigos">Artigos</Link>
-              <Link href="/treinamentos">Treinamentos</Link>
-              <a
-                href="https://www.youtube.com/@professorfisio"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                YouTube
-              </a>
-            </div>
-
-            <div className="footer-column">
-              <strong>Institucional</strong>
-              <Link href="/sobre">Sobre</Link>
-              <Link href="/contato">Contato</Link>
-            </div>
-
-            <div className="footer-column">
-              <strong>Para você</strong>
-              <Link href="/treinamentos/pacientes">Pacientes</Link>
-              <Link href="/treinamentos/fisioterapeutas">
-                Fisioterapeutas
-              </Link>
-            </div>
-          </div>
-
-          <div className="footer-bottom">
-            <p>© 2026 Dr. Frank Eduardo. Todos os direitos reservados.</p>
-            <p>Conteúdo educacional. Não substitui avaliação individual.</p>
-          </div>
-        </div>
-      </footer>
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(websiteSchema).replace(/</g, "\\u003c"),
         }}
       />
-    </div>
+    </>
   );
 }
