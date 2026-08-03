@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Fibromialgia tem cura? Sintomas, diagnóstico e tratamento",
     description:
       "Entenda a fibromialgia, seus principais sintomas, como é feito o diagnóstico e quais estratégias fazem parte do tratamento.",
-    images: ["/fibromialgia-capa.png"],
+    images: ["/fibromialgia-capa-artigo.png"],
   },
 };
 
