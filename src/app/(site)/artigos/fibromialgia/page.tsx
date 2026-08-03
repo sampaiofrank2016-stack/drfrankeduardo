@@ -153,7 +153,7 @@ export default function FibromialgiaArticlePage() {
         url: `${siteUrl}/og-image.png`,
       },
     },
-    image: `${siteUrl}/fibromialgia-capa.png`,
+    image: `${siteUrl}/fibromialgia-capa-artigo.png`,
     about: {
       "@type": "MedicalCondition",
       name: "Fibromialgia",
@@ -256,7 +256,7 @@ export default function FibromialgiaArticlePage() {
         <div className="container">
           <div className={styles.coverVisual}>
             <Image
-              src="/fibromialgia-capa.png"
+              src="/fibromialgia-capa-artigo.png"
               alt="Fibromialgia: informação, tratamento e qualidade de vida"
               fill
               priority
