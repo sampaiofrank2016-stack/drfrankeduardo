@@ -106,16 +106,24 @@ const articles = [
     imageAlt:
       "Notalgia parestésica com destaque para a região entre a coluna e a escápula",
   },
+  {
+    slug: "fibromialgia",
+    category: "Fibromialgia",
+    title:
+      "Fibromialgia: uma doença sem saída? Descubra por que a resposta é não",
+    description:
+      "Entenda os sintomas, como é feito o diagnóstico e quais estratégias podem ajudar no controle da dor e na qualidade de vida.",
+    readingTime: "9 min de leitura",
+    date: "3 ago 2026",
+    featured: false,
+    index: "02",
+    image: "/fibromialgia-capa.png",
+    imageAlt:
+      "Fibromialgia: informação, tratamento e qualidade de vida",
+  },
 ];
 
 const upcomingArticles = [
-  {
-    category: "Fibromialgia",
-    title: "Fibromialgia: uma doença sem saída?",
-    description:
-      "Uma visão clara sobre sintomas, diagnóstico, tratamento e possibilidades reais de melhora.",
-    index: "02",
-  },
   {
     category: "Coluna",
     title: "Hérnia de disco: quando a imagem não conta toda a história",
@@ -299,6 +307,53 @@ export default function ArticlesPage() {
                 </Link>
               </div>
             </article>
+          </div>
+        </section>
+
+        <section className={styles.librarySection}>
+          <div className="container">
+            <div className={styles.libraryHeading}>
+              <div>
+                <span className="eyebrow">Biblioteca de saúde</span>
+                <h2>Mais conteúdos publicados</h2>
+              </div>
+
+              <p>
+                Novos artigos para aprofundar temas importantes sobre dor,
+                movimento e qualidade de vida.
+              </p>
+            </div>
+
+            <div className={styles.upcomingGrid}>
+              {articles
+                .filter((article) => !article.featured)
+                .map((article) => (
+                  <article key={article.slug} className={styles.upcomingCard}>
+                    <div className={styles.upcomingTop}>
+                      <span>{article.category}</span>
+                      <strong>{article.index}</strong>
+                    </div>
+
+                    <div className={styles.upcomingBody}>
+                      <h3>{article.title}</h3>
+                      <p>{article.description}</p>
+                    </div>
+
+                    <div className={styles.articleMeta}>
+                      <span>{article.date}</span>
+                      <span>{article.readingTime}</span>
+                    </div>
+
+                    <Link
+                      href={`/artigos/${article.slug}`}
+                      className={styles.readLink}
+                    >
+                      Ler artigo
+                      <ArrowIcon />
+                    </Link>
+                  </article>
+                ))}
+            </div>
           </div>
         </section>
 
