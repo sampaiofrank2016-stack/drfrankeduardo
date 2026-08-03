@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     ],
     images: [
       {
-        url: "/fibromialgia-capa.png",
+        url: "/fibromialgia-capa-artigo.png",
         width: 1200,
         height: 1200,
         alt: "Fibromialgia: informação, tratamento e qualidade de vida",
