@@ -246,11 +246,7 @@ export default function TrainingCatalogPage({
                     href={product.href}
                     className="catalog-product-button"
                   >
-                    {product.buttonLabel ??
-                      (isWaitlist
-                        ? "Entrar na lista de espera"
-                        : "Conhecer treinamento")}
-
+                    {product.buttonLabel ?? "Conhecer treinamento"}
                     <ArrowIcon />
                   </Link>
                 </article>
