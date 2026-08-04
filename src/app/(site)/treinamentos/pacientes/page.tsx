@@ -6,7 +6,7 @@ import TrainingCatalogPage, {
 export const metadata: Metadata = {
   title: "Treinamentos para pacientes",
   description:
-    "Programas educativos para ajudar pacientes a compreender sintomas, tratamentos e possibilidades de cuidado.",
+    "Treinamentos, livros e materiais educativos para ajudar pacientes a compreender sintomas, tratamentos e possibilidades de cuidado.",
 };
 
 const products: TrainingProduct[] = [
@@ -28,6 +28,26 @@ const products: TrainingProduct[] = [
       "Aulas no seu ritmo",
     ],
   },
+
+  {
+    category: "Livro digital",
+    title: "Porquê Depois dos “Enta”",
+    description:
+      "Uma leitura sobre as mudanças que aparecem depois dos 40 e como hábitos, escolhas e sobrecargas acumuladas ao longo da vida podem influenciar nossa saúde.",
+    format: "Livro digital",
+    access: "Imediato",
+    price: "R$ 12,90",
+    href: "/livros/depois-dos-enta",
+    status: "available",
+    buttonLabel: "Conhecer o livro",
+    highlights: [
+      "Saúde depois dos 40",
+      "Hábitos e qualidade de vida",
+      "Linguagem acessível",
+      "Leitura no seu ritmo",
+    ],
+  },
+
   {
     category: "Guia educativo",
     title: "Fibromialgia, Ansiedade e Depressão",
@@ -45,6 +65,7 @@ const products: TrainingProduct[] = [
       "Acesso imediato",
     ],
   },
+
   {
     category: "Guia educativo",
     title: "7 Passos para Aliviar a Dor Lombar",
@@ -62,34 +83,61 @@ const products: TrainingProduct[] = [
       "Prevenção da dor lombar",
     ],
   },
+
   {
     category: "Coluna vertebral",
-    title: "Entendendo a hérnia de disco",
+    title: "Hérnia de Disco Sem Medo",
     description:
-      "Conteúdo educativo sobre exames, sintomas, movimento e possibilidades de cuidado.",
-    format: "Curso online",
-    access: "Em breve",
-    href: "#",
+      "Um treinamento educativo para compreender a hérnia de disco, interpretar melhor exames, conhecer os tratamentos e recuperar confiança para se movimentar.",
+    format: "Treinamento online",
+    access: "Em preparação",
+    href: "/treinamentos/pacientes/hernia-de-disco",
     status: "soon",
-    highlights: [],
+    buttonLabel: "Entrar na lista de espera",
+    highlights: [
+      "Compreensão do diagnóstico",
+      "Exames sem alarmismo",
+      "Tratamentos e possibilidades",
+      "Movimento com mais confiança",
+    ],
   },
+
+  {
+    category: "Dor no ombro",
+    title: "Protocolo para Dor no Ombro",
+    description:
+      "Um treinamento educativo e prático para compreender melhor a dor no ombro, recuperar confiança no movimento e conhecer estratégias de cuidado.",
+    format: "Treinamento online",
+    access: "Em preparação",
+    href: "/treinamentos/pacientes/dor-no-ombro",
+    status: "soon",
+    buttonLabel: "Entrar na lista de espera",
+    highlights: [
+      "Compreensão da dor",
+      "Movimento e função",
+      "Exercícios e estratégias",
+      "Orientação para o cotidiano",
+    ],
+  },
+
   {
     category: "Dor cervical",
     title: "Cuidados com a coluna cervical",
     description:
       "Uma jornada para compreender dores cervicais, tensão muscular e fatores relacionados ao cotidiano.",
-    format: "Curso online",
+    format: "Treinamento online",
     access: "Em breve",
     href: "#",
     status: "soon",
     highlights: [],
   },
+
   {
     category: "Articulação temporomandibular",
     title: "Dor na ATM e tensão facial",
     description:
       "Informações sobre tensão mandibular, bruxismo, dor de cabeça e desconfortos cervicais.",
-    format: "Curso online",
+    format: "Treinamento online",
     access: "Em breve",
     href: "#",
     status: "soon",
@@ -124,13 +172,13 @@ export default function PatientTrainingsPage() {
       audienceLabel="Para pacientes"
       title="Conhecimento para você"
       highlightedTitle="cuidar melhor da sua saúde."
-      description="Programas educativos criados para ajudar você a compreender sintomas, tratamentos e possibilidades de cuidado sem promessas milagrosas ou informações alarmistas."
-      primaryActionLabel="Ver treinamentos disponíveis"
+      description="Treinamentos, livros e materiais educativos criados para ajudar você a compreender sintomas, tratamentos e possibilidades de cuidado sem promessas milagrosas ou informações alarmistas."
+      primaryActionLabel="Ver conteúdos disponíveis"
       primaryActionHref="#catalogo"
       secondaryActionLabel="Conhecer o consultório"
       secondaryActionHref="/consultorio"
       productsTitle="Informação para transformar sua relação com a saúde."
-      productsDescription="Comece por um guia acessível ou avance para uma jornada mais completa de aprendizado."
+      productsDescription="Escolha entre treinamentos, livros e guias educativos ou entre para a lista de espera dos próximos conteúdos."
       products={products}
       benefits={benefits}
       finalTitle="Cuidar melhor começa por compreender melhor."
