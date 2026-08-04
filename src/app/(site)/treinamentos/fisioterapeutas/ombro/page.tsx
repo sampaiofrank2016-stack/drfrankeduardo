@@ -101,7 +101,9 @@ export default function TerapiaManualOmbroPage() {
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-white/75">
-                Pare de depender de tentativas aleatórias no atendimento. Aprenda avaliação, raciocínio clínico e técnicas de terapia manual aplicadas ao complexo articular do ombro.
+                Pare de sofrer usando &quot;choquinho&quot; nos seus pacientes,
+                aprenda técnicas realmente eficazes no tratamento do complexo
+                articular do ombro.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3 text-sm text-white/80">
@@ -119,22 +121,15 @@ export default function TerapiaManualOmbroPage() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-white/[0.06] p-6 shadow-2xl">
-              <div className="rounded-[1.6rem] bg-gradient-to-br from-slate-950 to-emerald-950 p-7">
-                <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-300">Formação clínica</span>
-                <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-6">
-                  <strong className="block text-2xl">Terapia Manual</strong>
-                  <span className="mt-1 block text-lg text-white/70">Aplicada ao Ombro</span>
-                  <div className="mt-8 space-y-4">
-                    {["Anatomia e biomecânica", "Avaliação e raciocínio clínico", "Técnicas articulares", "Técnicas miofasciais"].map((item) => (
-                      <div key={item} className="flex items-center gap-3">
-                        <CheckIcon />
-                        <span className="text-sm text-white/80">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+            <div className="relative min-h-[390px] sm:min-h-[460px] lg:min-h-[520px]">
+              <Image
+                src="/images/terapia-manual-ombro-capa.png"
+                alt="Curso Terapia Manual Aplicada ao Ombro"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 46vw"
+                className="object-contain drop-shadow-2xl"
+              />
             </div>
           </div>
         </div>
@@ -152,14 +147,33 @@ export default function TerapiaManualOmbroPage() {
       </section>
 
       <section className="bg-slate-50 py-20">
-        <div className="container grid gap-12 lg:grid-cols-[.9fr_1.1fr]">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">Para quem quer tratar melhor</span>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Muito além de decorar técnicas.</h2>
-          </div>
-          <div className="space-y-5 text-lg leading-8 text-slate-600">
-            <p>A terapia manual é uma das ferramentas utilizadas no manejo de alterações musculoesqueléticas. Mas dominar uma técnica sem saber quando, por que e para quem utilizá-la limita o resultado clínico.</p>
-            <p>O curso foi estruturado para integrar anatomia, biomecânica, avaliação, raciocínio clínico e aplicação prática no complexo do ombro.</p>
+        <div className="container">
+          <div className="mx-auto max-w-5xl text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">
+              Formação completa
+            </span>
+
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+              Curso de capacitação para profissionais e estudantes com
+              videoaulas teóricas e práticas demonstrativas.
+            </h2>
+
+            <div className="mx-auto mt-8 max-w-4xl space-y-6 text-lg leading-8 text-slate-600">
+              <p>
+                A Terapia Manual é uma das ferramentas de tratamento mais
+                eficientes para tratar as patologias do sistema
+                musculoesquelético. Aprender a avaliar e dominar essas técnicas
+                de tratamento é um grande diferencial na carreira de qualquer
+                fisioterapeuta.
+              </p>
+
+              <p>
+                Neste curso iremos abordar anatomia, biomecânica e técnicas de
+                tratamento, com um vasto conhecimento teórico e prático para
+                você aprender de vez como ter resultados efetivos no tratamento
+                do complexo articular do ombro.
+              </p>
+            </div>
           </div>
         </div>
       </section>
