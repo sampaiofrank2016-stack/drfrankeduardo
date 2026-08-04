@@ -36,7 +36,6 @@ const products: TrainingProduct[] = [
       "Uma leitura sobre as mudanças que aparecem depois dos 40 e como hábitos, escolhas e sobrecargas acumuladas ao longo da vida podem influenciar nossa saúde.",
     format: "Livro digital",
     access: "Imediato",
-    price: "R$ 12,90",
     href: "/livros/depois-dos-enta",
     status: "available",
     buttonLabel: "Conhecer o livro",
