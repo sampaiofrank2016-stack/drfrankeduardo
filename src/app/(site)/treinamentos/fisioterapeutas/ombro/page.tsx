@@ -123,7 +123,7 @@ export default function TerapiaManualOmbroPage() {
 
             <div className="relative min-h-[390px] sm:min-h-[460px] lg:min-h-[520px]">
               <Image
-                src="/images/terapia-manual-ombro-capa.png"
+                src="/terapia-manual-ombro-capa.png"
                 alt="Curso Terapia Manual Aplicada ao Ombro"
                 fill
                 priority
@@ -251,17 +251,97 @@ export default function TerapiaManualOmbroPage() {
       </section>
 
       <section className="py-20">
-        <div className="container grid items-center gap-12 lg:grid-cols-[.8fr_1.2fr]">
-          <div className="relative min-h-[480px] overflow-hidden rounded-[2rem] bg-slate-100">
-            <Image src="/images/frank-eduardo-sobre.jpg" alt="Dr. Frank Eduardo" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
-          </div>
+        <div className="container">
+          <div className="grid items-start gap-12 lg:grid-cols-[.8fr_1.2fr]">
+            <div className="relative min-h-[480px] overflow-hidden rounded-[2rem] bg-slate-100">
+              <Image
+                src="/images/frank-eduardo-sobre.jpg"
+                alt="Dr. Frank Eduardo"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover"
+              />
+            </div>
 
-          <div>
-            <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">Sobre o docente</span>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Experiência clínica aplicada ao ensino.</h2>
-            <p className="mt-6 text-lg leading-8 text-slate-600">
-              Frank Eduardo é fisioterapeuta, com atuação em terapia manual, osteopatia e quiropraxia. Sua experiência clínica é a base para transformar conceitos técnicos em raciocínio aplicável ao atendimento.
-            </p>
+            <div>
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">
+                Sobre o docente
+              </span>
+
+              <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                Experiência clínica aplicada ao ensino.
+              </h2>
+
+              <p className="mt-6 text-lg leading-8 text-slate-600">
+                Frank Eduardo C. Sampaio é fisioterapeuta e atua há mais de 17
+                anos no tratamento de disfunções musculoesqueléticas por meio da
+                Terapia Manual, Osteopatia e Quiropraxia. Sua experiência clínica
+                é a base para transformar conceitos técnicos em raciocínio
+                aplicável ao atendimento.
+              </p>
+
+              <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+                {[
+                  ["+17 anos", "Experiência Clínica"],
+                  ["+20.000", "Pacientes Atendidos"],
+                  ["+1.100", "Alunos Matriculados"],
+                  ["11", "Módulos de Conteúdo"],
+                ].map(([value, label]) => (
+                  <div
+                    key={label}
+                    className="rounded-2xl border border-slate-200 bg-slate-50 p-5 text-center"
+                  >
+                    <strong className="block text-3xl font-bold text-emerald-700">
+                      {value}
+                    </strong>
+
+                    <span className="mt-2 block text-sm leading-5 text-slate-500">
+                      {label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+                <h3 className="text-xl font-bold text-slate-900">
+                  Formação acadêmica
+                </h3>
+
+                <ul className="mt-6 space-y-3 leading-7 text-slate-600">
+                  {[
+                    "Graduação em Fisioterapia pela FEF/FIFE — SP",
+                    "Pós-graduação em Saúde Pública pela FAMA — MG",
+                    "Formação em RPG Contemporâneo pela Fisionet — SP",
+                    "Formação em Osteopatia Estrutural, Postural e Visceral pelo IDOT",
+                    "Formação em Microfisioterapia P7/P8 pelo Instituto Salgado",
+                    "Pós-graduação em Quiropraxia Clínica pelo INAESP",
+                    "Pós-graduação em Fisioterapia Forense",
+                    "Pós-graduando em Perícia Judicial",
+                  ].map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-1 text-emerald-700">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <h3 className="mt-10 text-xl font-bold text-slate-900">
+                  Experiência docente
+                </h3>
+
+                <ul className="mt-6 space-y-3 leading-7 text-slate-600">
+                  {[
+                    "Gestor do Polo de Pós-graduação INAESP em Itumbiara-GO por 3 anos",
+                    "Docente em cursos de Pós-graduação INAESP por 2 anos",
+                  ].map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-1 text-emerald-700">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
