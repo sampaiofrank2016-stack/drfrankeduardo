@@ -1,207 +1,59 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "Terapia Manual Aplicada ao Ombro",
-  description:
-    "Treinamento profissional com mais de 130 videoaulas sobre avaliação, biomecânica, raciocínio clínico e técnicas de terapia manual aplicadas ao ombro.",
-};
 
 const checkoutUrl = "https://pay.hotmart.com/H39460015D";
 
-const outcomes = [
-  "Avaliar o complexo articular do ombro com mais segurança.",
-  "Compreender a anatomia e a biomecânica de forma integrada.",
-  "Desenvolver um raciocínio clínico mais organizado.",
-  "Selecionar técnicas de acordo com os achados da avaliação.",
-  "Aplicar recursos manuais com maior precisão clínica.",
-  "Conduzir atendimentos com mais confiança profissional.",
+export const metadata: Metadata = {
+  title: "Terapia Manual Aplicada ao Ombro | Curso para Fisioterapeutas",
+  description:
+    "Curso online de Terapia Manual Aplicada ao Ombro com avaliação, raciocínio clínico, anatomia, biomecânica e técnicas práticas de tratamento.",
+  alternates: {
+    canonical: "/treinamentos/fisioterapeutas/terapia-manual-ombro",
+  },
+};
+
+const benefits = [
+  "Avaliar o complexo articular do ombro com mais segurança",
+  "Melhorar o raciocínio clínico",
+  "Escolher técnicas de tratamento com mais critério",
+  "Diminuir tentativas aleatórias durante o atendimento",
+  "Construir resultados clínicos mais consistentes",
+  "Aumentar a percepção de valor do seu atendimento",
 ];
 
 const modules = [
-  {
-    number: "01",
-    title: "Introdução ao complexo articular do ombro",
-    description:
-      "Visão geral do treinamento e compreensão inicial das estruturas que formam o complexo do ombro.",
-    topics: ["Organização do conteúdo", "Complexo articular", "Visão integrada"],
-  },
-  {
-    number: "02",
-    title: "Sistema ósseo",
-    description:
-      "Estudo das estruturas ósseas que participam da função e da mobilidade do ombro.",
-    topics: ["Úmero", "Escápula", "Clavícula"],
-  },
-  {
-    number: "03",
-    title: "Sistema articular",
-    description:
-      "Compreensão funcional das articulações e de suas relações durante o movimento.",
-    topics: [
-      "Esternoclavicular",
-      "Acromioclavicular",
-      "Glenoumeral",
-      "Escapulotorácica",
-    ],
-  },
-  {
-    number: "04",
-    title: "Sistema nervoso e raciocínio clínico",
-    description:
-      "Integração entre plexo braquial, dermátomos, correlações clínicas e tomada de decisão.",
-    topics: ["Plexo braquial", "Dermátomos", "Correlações clínicas"],
-  },
-  {
-    number: "05",
-    title: "Sistema vascular",
-    description:
-      "Fundamentos vasculares importantes para uma avaliação mais ampla e responsável.",
-    topics: ["Anatomia vascular", "Relações clínicas", "Segurança"],
-  },
-  {
-    number: "06",
-    title: "Sistema muscular",
-    description:
-      "Estudo detalhado dos músculos envolvidos na estabilidade e no movimento do ombro.",
-    topics: ["Manguito rotador", "Músculos escapulares", "Músculos torácicos"],
-  },
-  {
-    number: "07",
-    title: "Biomecânica do ombro",
-    description:
-      "Entenda os movimentos globais, a participação escapular e as relações entre as estruturas.",
-    topics: ["Macro e microfisiologia", "Ritmo escapular", "Movimentos globais"],
-  },
-  {
-    number: "08",
-    title: "Técnicas para clavícula",
-    description:
-      "Avaliação de mobilidade e técnicas voltadas às disfunções claviculares.",
-    topics: [
-      "Acromioclavicular",
-      "Esternoclavicular",
-      "Rotações e translações",
-    ],
-  },
-  {
-    number: "09",
-    title: "Técnicas para escápula",
-    description:
-      "Testes funcionais, avaliação escapular e técnicas de mobilização.",
-    topics: ["Teste de assistência", "Teste de apoio", "Mobilização escapular"],
-  },
-  {
-    number: "10",
-    title: "Técnicas para úmero e glenoumeral",
-    description:
-      "Avaliação das principais disfunções e aplicação das técnicas correspondentes.",
-    topics: ["Superioridade", "Inferioridade", "Anterioridade", "Posterioridade"],
-  },
-  {
-    number: "11",
-    title: "Disfunções miofasciais",
-    description:
-      "Técnicas de stretching e abordagem manual dos principais músculos relacionados ao ombro.",
-    topics: ["Trapézio", "Manguito rotador", "Peitorais", "Grande dorsal"],
-  },
-];
-
-const bonuses = [
-  {
-    number: "01",
-    title: "Introdução à Terapia Manual",
-    description:
-      "Fundamentos para compreender os princípios e a aplicação dos recursos manuais.",
-  },
-  {
-    number: "02",
-    title: "Diagnóstico diferencial",
-    description:
-      "Conteúdo complementar para ampliar a capacidade de análise clínica.",
-  },
-  {
-    number: "03",
-    title: "Técnica para cervical e integração dos sistemas",
-    description:
-      "Abordagem complementar das relações entre região cervical, ombro e demais sistemas.",
-  },
-  {
-    number: "04",
-    title: "As cinco leis biológicas e dor no ombro",
-    description:
-      "Aulas complementares apresentando essa linha de interpretação e suas relações com o tema.",
-  },
-];
+  ["Módulo 1 — Introdução", ["Complexo Articular do Ombro"]],
+  ["Módulo 2 — Sistema Ósseo", ["Introdução", "Sistema ósseo", "Funções do sistema ósseo", "Úmero", "Escápula", "Clavícula"]],
+  ["Módulo 3 — Sistema Articular", ["Introdução", "Funções da articulação", "Classificação das articulações", "Articulação esternoclavicular", "Articulação acromioclavicular", "Articulação glenoumeral", "Articulação escapulotorácica", "Espaço subacromial"]],
+  ["Módulo 4 — Sistema Nervoso", ["Introdução", "Plexo braquial", "Dermátomos", "Correlações clínicas", "Raciocínio clínico"]],
+  ["Módulo 5 — Sistema Vascular", ["Anatomia e relações clínicas do sistema vascular"]],
+  ["Módulo 6 — Sistema Muscular", ["Serrátil anterior", "Trapézio", "Elevador da escápula", "Romboides", "Grande dorsal", "Peitoral maior", "Peitoral menor", "Subclávio", "Deltóide", "Supraespinhal", "Infraespinhal", "Redondo menor", "Redondo maior", "Subescapular", "Manguito rotador"]],
+  ["Módulo 7 — Biomecânica", ["Introdução", "Macrofisiologia", "Microfisiologia", "Movimentos globais do ombro", "Elevação e depressão da escápula", "Abdução e adução da escápula", "Báscula medial e lateral da escápula", "Flexão e extensão", "Abdução e adução", "Rotação externa e interna", "Abdução e adução horizontal", "Circundução"]],
+  ["Módulo 8 — Técnicas de Tratamento da Clavícula", ["Testes de mobilidade e avaliação acromioclavicular", "Mobilização para disfunções anterior e posterior da acromioclavicular", "Testes de mobilidade esternoclavicular", "Mobilizações em superioridade e inferioridade", "Avaliação de rotação anterior e posterior da clavícula", "Técnicas específicas para correção das disfunções encontradas"]],
+  ["Módulo 9 — Técnicas de Tratamento da Escápula", ["Teste de assistência escapular", "Teste de apoio escapular", "Avaliação da escápula", "Técnicas de mobilização da escápula"]],
+  ["Módulo 10 — Técnicas de Tratamento do Úmero", ["Descrição e palpação estática", "Avaliação das disfunções em superioridade e inferioridade", "Avaliação das disfunções em anterioridade e posterioridade", "Testes de mobilidade", "Mobilizações específicas", "Mobilização glenoumeral"]],
+  ["Módulo 11 — Técnicas de Tratamento das Disfunções Miofasciais", ["Stretching para elevador da escápula", "Stretching para trapézio", "Traços miofasciais para supraespinhal", "Stretching para infraespinhal", "Stretching para deltóide", "Inibição do subescapular", "Stretching para romboides", "Stretching para peitoral maior e menor", "Stretching para redondos", "Stretching para grande dorsal e serrátil"]],
+] as const;
 
 const testimonials = [
-  {
-    text: "Treinamento excelente, com abordagem completa das estruturas e do tratamento. Parabéns aos envolvidos.",
-    author: "Pablo Antunes Ayub",
-  },
-  {
-    text: "O passo a passo e o raciocínio clínico exposto tornam o entendimento do tema muito fácil.",
-    author: "Marco Antônio M. Batista",
-  },
-  {
-    text: "Um treinamento extraordinário. Super indico.",
-    author: "Iria T. Wasniewski",
-  },
-  {
-    text: "Estrutura perfeita desde a anatomia até o tratamento do ombro.",
-    author: "Camila Graziela Leal",
-  },
-];
+  ["Curso excelente com abordagem completa das estruturas e tratamento. Parabéns aos envolvidos.", "Dr. Pablo A. Ayub"],
+  ["O passo a passo do curso e o raciocínio clínico exposto torna o entendimento do tema muito fácil. Tudo que um profissional da saúde pode buscar em um curso.", "Dr. Marco Antônio M. Batista"],
+  ["Um curso extraordinário, super indico.", "Dr. Iria T. Wasniewski"],
+  ["Curso excelente, com uma estrutura perfeita desde a anatomia até o tratamento do ombro.", "Dra. Camila Graziela Leal"],
+] as const;
 
-const faqs = [
-  {
-    question: "Qual é a carga horária?",
-    answer:
-      "O treinamento possui certificação de 30 horas, considerando as videoaulas, os estudos complementares e a prática realizada pelo aluno.",
-  },
-  {
-    question: "Quem pode participar?",
-    answer:
-      "O treinamento é destinado a fisioterapeutas, estudantes de fisioterapia e outros profissionais da saúde, sempre respeitando as atribuições e autorizações de cada conselho profissional.",
-  },
-  {
-    question: "Por quanto tempo terei acesso?",
-    answer:
-      "O acesso fica disponível por 365 dias a partir da confirmação da matrícula.",
-  },
-  {
-    question: "O treinamento possui certificado?",
-    answer:
-      "Sim. Após concluir as aulas e cumprir os critérios informados no ambiente de aprendizagem, o aluno poderá solicitar o certificado de 30 horas.",
-  },
-  {
-    question: "Onde assistirei às aulas?",
-    answer:
-      "O acesso é realizado pela plataforma Hotmart, pelo celular, tablet ou computador.",
-  },
-  {
-    question: "Quantas aulas estão disponíveis?",
-    answer:
-      "São mais de 130 videoaulas teóricas e práticas demonstrativas, distribuídas ao longo de 11 módulos.",
-  },
-  {
-    question: "Existe garantia?",
-    answer:
-      "Sim. A compra possui garantia de 7 dias, conforme as regras apresentadas durante o checkout da Hotmart.",
-  },
-];
+const faq = [
+  ["Qual a carga horária do curso?", "Carga horária de 30 horas certificadas, considerando videoaulas, estudo do material e treinamento prático."],
+  ["Qual o objetivo do curso?", "Desenvolver habilidades para avaliação, raciocínio clínico e aplicação de técnicas de terapia manual no complexo articular do ombro."],
+  ["Quem pode realizar o curso?", "O conteúdo é destinado a profissionais e estudantes da área da saúde. A aplicação clínica deve respeitar as competências de cada conselho profissional."],
+  ["Quanto tempo tenho acesso?", "O acesso é realizado pela Hotmart conforme as condições vigentes apresentadas no momento da compra."],
+  ["Como funciona o certificado?", "O certificado é disponibilizado conforme os critérios de conclusão definidos dentro da plataforma do curso."],
+  ["Em qual plataforma vou acessar?", "O acesso ao curso é realizado pela Hotmart."],
+] as const;
 
 function ArrowIcon() {
   return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="arrow-icon"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-    >
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" className="h-5 w-5" stroke="currentColor" strokeWidth="1.8">
       <path d="M5 12h14" />
       <path d="m13 6 6 6-6 6" />
     </svg>
@@ -210,575 +62,266 @@ function ArrowIcon() {
 
 function CheckIcon() {
   return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="shoulder-check-icon"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    >
-      <path d="m5 12 4 4L19 6" />
-    </svg>
+    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-sm font-bold text-emerald-800">
+      ✓
+    </span>
   );
 }
 
-function CheckoutButton({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+function BuyButton({ label = "Quero me matricular" }: { label?: string }) {
   return (
     <a
       href={checkoutUrl}
       target="_blank"
-      rel="noreferrer"
-      className={className}
+      rel="noopener noreferrer"
+      className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-emerald-700 px-7 text-base font-bold text-white shadow-lg shadow-emerald-950/10 transition hover:-translate-y-0.5 hover:bg-emerald-800"
     >
-      {children}
+      {label}
+      <ArrowIcon />
     </a>
   );
 }
 
-export default function ShoulderTrainingPage() {
+export default function TerapiaManualOmbroPage() {
   return (
-    <div className="site-shell">
-      <header className="site-header shoulder-header">
-        <div className="container header-content">
-          <Link href="/" className="brand" aria-label="Página inicial">
-            <span className="brand-mark">FE</span>
+    <main className="bg-white text-slate-900">
+      <section className="relative overflow-hidden bg-[#0e241d] text-white">
+        <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-emerald-400/10" />
+        <div className="absolute -bottom-32 -left-20 h-96 w-96 rounded-full bg-white/5" />
 
-            <span className="brand-copy">
-              <strong>Dr. Frank Eduardo</strong>
-              <small>Educação e prática clínica</small>
-            </span>
-          </Link>
-
-          <nav className="desktop-navigation" aria-label="Navegação principal">
-            <Link href="/">Início</Link>
-            <Link href="/artigos">Artigos</Link>
-            <Link href="/treinamentos">Treinamentos</Link>
-            <Link href="/tecnologia">Tecnologia</Link>
-            <Link href="/sobre">Sobre</Link>
-          </nav>
-
-          <CheckoutButton className="header-cta">
-            Fazer matrícula
-          </CheckoutButton>
-
-          <details className="mobile-navigation">
-            <summary aria-label="Abrir menu">
-              <span />
-              <span />
-              <span />
-            </summary>
-
-            <div className="mobile-menu">
-              <Link href="/">Início</Link>
-              <Link href="/artigos">Artigos</Link>
-              <Link href="/treinamentos">Treinamentos</Link>
-              <Link href="/tecnologia">Tecnologia</Link>
-              <Link href="/sobre">Sobre</Link>
-
-              <CheckoutButton className="mobile-menu-cta">
-                Fazer matrícula
-              </CheckoutButton>
-            </div>
-          </details>
-        </div>
-      </header>
-
-      <main>
-        <section className="shoulder-hero">
-          <div className="container shoulder-hero-grid">
-            <div className="shoulder-hero-content">
-              <div className="breadcrumb shoulder-breadcrumb">
-                <Link href="/">Início</Link>
-                <span>/</span>
-                <Link href="/treinamentos/fisioterapeutas">
-                  Treinamentos
-                </Link>
-                <span>/</span>
-                <strong>Ombro</strong>
-              </div>
-
-              <span className="shoulder-eyebrow">
-                Formação clínica profissional
+        <div className="container relative z-10 py-16 sm:py-20 lg:py-24">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
+            <div>
+              <span className="inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-emerald-200">
+                Curso online para profissionais da saúde
               </span>
 
-              <h1>
-                Terapia Manual Aplicada ao <span>Ombro.</span>
+              <h1 className="mt-6 max-w-4xl text-4xl font-bold leading-[1.03] tracking-[-0.045em] sm:text-5xl lg:text-6xl">
+                Terapia Manual Aplicada ao Ombro
               </h1>
 
-              <p>
-                Domine a avaliação, o raciocínio clínico e as principais
-                técnicas de terapia manual aplicadas ao complexo articular do
-                ombro.
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-white/75">
+                Pare de depender de tentativas aleatórias no atendimento. Aprenda avaliação, raciocínio clínico e técnicas de terapia manual aplicadas ao complexo articular do ombro.
               </p>
 
-              <div className="shoulder-hero-highlights">
-                <div>
-                  <CheckIcon />
-                  <span>Mais de 130 videoaulas</span>
-                </div>
-
-                <div>
-                  <CheckIcon />
-                  <span>Certificado de 30 horas</span>
-                </div>
-
-                <div>
-                  <CheckIcon />
-                  <span>Acesso por 12 meses</span>
-                </div>
-
-                <div>
-                  <CheckIcon />
-                  <span>Aulas teóricas e práticas</span>
-                </div>
+              <div className="mt-8 flex flex-wrap gap-3 text-sm text-white/80">
+                <span className="rounded-full border border-white/15 px-4 py-2">100% online</span>
+                <span className="rounded-full border border-white/15 px-4 py-2">Certificado</span>
+                <span className="rounded-full border border-white/15 px-4 py-2">Teoria + prática</span>
               </div>
 
-              <div className="shoulder-hero-offer">
+              <div className="mt-9 flex flex-col gap-5 sm:flex-row sm:items-center">
+                <BuyButton />
                 <div>
-                  <span>Investimento único</span>
-                  <strong>R$ 97,00</strong>
+                  <span className="block text-sm text-white/55">Investimento atual</span>
+                  <strong className="text-3xl font-bold text-white">R$ 97,00</strong>
                 </div>
-
-                <CheckoutButton className="button shoulder-primary-button">
-                  Fazer minha matrícula
-                  <ArrowIcon />
-                </CheckoutButton>
-              </div>
-
-              <small>
-                Compra segura, acesso imediato e garantia de 7 dias pela
-                Hotmart.
-              </small>
-            </div>
-
-            <div className="shoulder-visual">
-              <div className="shoulder-course-cover">
-                <Image
-                  src="/terapia-manual-ombro-capa.png"
-                  alt="Capa do treinamento Terapia Manual Aplicada ao Ombro"
-                  width={1102}
-                  height={1376}
-                  priority
-                  sizes="(max-width: 1020px) 90vw, 500px"
-                />
               </div>
             </div>
-          </div>
-        </section>
 
-        <section className="shoulder-problem-section">
-          <div className="container shoulder-problem-grid">
-            <div>
-              <span className="shoulder-eyebrow">O desafio clínico</span>
-
-              <h2>
-                Tratar o ombro exige mais do que conhecer técnicas isoladas.
-              </h2>
-
-              <p>
-                A complexidade anatômica e biomecânica da região exige uma
-                avaliação organizada, compreensão das estruturas e capacidade
-                para relacionar os achados clínicos.
-              </p>
-            </div>
-
-            <div className="shoulder-problem-list">
-              {[
-                "Dificuldade para identificar qual estrutura está envolvida.",
-                "Insegurança para escolher o teste ou a técnica adequada.",
-                "Protocolos genéricos que não consideram a avaliação individual.",
-                "Pouca integração entre anatomia, biomecânica e tratamento.",
-                "Dependência excessiva de recursos passivos e aparelhos.",
-              ].map((item, index) => (
-                <article key={item}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <p>{item}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="shoulder-outcomes-section">
-          <div className="container">
-            <div className="centered-heading">
-              <span className="shoulder-eyebrow">
-                O que você desenvolverá
-              </span>
-
-              <h2>
-                Mais segurança para avaliar, raciocinar e conduzir o
-                tratamento.
-              </h2>
-            </div>
-
-            <div className="shoulder-outcomes-grid">
-              {outcomes.map((outcome, index) => (
-                <article key={outcome}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <p>{outcome}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="shoulder-proof-section">
-          <div className="container">
-            <div className="shoulder-proof-heading">
-              <span className="shoulder-eyebrow">Dados reais dos alunos</span>
-
-              <h2>
-                Uma formação validada por quem chegou até o final.
-              </h2>
-
-              <p>
-                Os indicadores abaixo foram obtidos através do questionário de
-                conclusão preenchido pelos próprios alunos.
-              </p>
-            </div>
-
-            <div className="shoulder-proof-grid">
-              <article>
-                <strong>199</strong>
-                <span>respostas após a conclusão</span>
-              </article>
-
-              <article>
-                <strong>100%</strong>
-                <span>disseram que recomendariam</span>
-              </article>
-
-              <article>
-                <strong>193</strong>
-                <span>relataram mudança na percepção clínica</span>
-              </article>
-
-              <article>
-                <strong>135</strong>
-                <span>avaliaram o treinamento como ótimo</span>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section className="shoulder-authority-section">
-          <div className="container shoulder-authority-grid">
-            <div className="shoulder-authority-stats">
-              <article>
-                <strong>+17</strong>
-                <span>anos de experiência clínica</span>
-              </article>
-
-              <article>
-                <strong>+20 mil</strong>
-                <span>pacientes atendidos</span>
-              </article>
-
-              <article>
-                <strong>+130</strong>
-                <span>videoaulas na formação</span>
-              </article>
-            </div>
-
-            <div className="shoulder-authority-content">
-              <span className="shoulder-eyebrow">
-                Experiência aplicada à formação
-              </span>
-
-              <h2>
-                Conhecimento construído entre o consultório e a sala de aula.
-              </h2>
-
-              <p>
-                Frank Eduardo é fisioterapeuta com mais de 17 anos de
-                experiência clínica e mais de 20 mil pacientes atendidos.
-                Atua especialmente com terapia manual, osteopatia e
-                quiropraxia.
-              </p>
-
-              <p>
-                Também possui experiência como docente e gestor de
-                pós-graduação, reunindo prática clínica e didática para
-                apresentar conteúdos complexos de forma clara e aplicável.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="shoulder-modules-section">
-          <div className="container">
-            <div className="section-heading shoulder-modules-heading">
-              <div>
-                <span className="shoulder-eyebrow">Conteúdo programático</span>
-                <h2>Uma formação completa em 11 módulos.</h2>
-              </div>
-
-              <p>
-                O conteúdo avança dos fundamentos anatômicos até a avaliação e
-                aplicação prática das técnicas.
-              </p>
-            </div>
-
-            <div className="shoulder-modules-grid">
-              {modules.map((module) => (
-                <article className="shoulder-module-card" key={module.number}>
-                  <div className="shoulder-module-header">
-                    <span>Módulo</span>
-                    <strong>{module.number}</strong>
-                  </div>
-
-                  <h3>{module.title}</h3>
-                  <p>{module.description}</p>
-
-                  <div className="shoulder-module-topics">
-                    {module.topics.map((topic) => (
-                      <div key={topic}>
+            <div className="rounded-[2rem] border border-white/10 bg-white/[0.06] p-6 shadow-2xl">
+              <div className="rounded-[1.6rem] bg-gradient-to-br from-slate-950 to-emerald-950 p-7">
+                <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-300">Formação clínica</span>
+                <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-6">
+                  <strong className="block text-2xl">Terapia Manual</strong>
+                  <span className="mt-1 block text-lg text-white/70">Aplicada ao Ombro</span>
+                  <div className="mt-8 space-y-4">
+                    {["Anatomia e biomecânica", "Avaliação e raciocínio clínico", "Técnicas articulares", "Técnicas miofasciais"].map((item) => (
+                      <div key={item} className="flex items-center gap-3">
                         <CheckIcon />
-                        <span>{topic}</span>
+                        <span className="text-sm text-white/80">{item}</span>
                       </div>
                     ))}
                   </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="shoulder-bonuses-section">
-          <div className="container">
-            <div className="shoulder-bonuses-heading">
-              <span className="shoulder-eyebrow">
-                Conteúdos complementares
-              </span>
-
-              <h2>Quatro bônus incluídos na sua matrícula.</h2>
-            </div>
-
-            <div className="shoulder-bonuses-grid">
-              {bonuses.map((bonus) => (
-                <article key={bonus.number}>
-                  <span>Bônus {bonus.number}</span>
-                  <h3>{bonus.title}</h3>
-                  <p>{bonus.description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="shoulder-testimonials-section">
-          <div className="container">
-            <div className="shoulder-testimonials-heading">
-              <span className="shoulder-eyebrow">
-                Relatos de quem participou
-              </span>
-
-              <h2>Experiências compartilhadas após a conclusão.</h2>
-
-              <p>
-                Os depoimentos foram enviados pelos próprios alunos através do
-                formulário de conclusão do treinamento.
-              </p>
-            </div>
-
-            <div className="shoulder-testimonials-grid">
-              {testimonials.map((testimonial) => (
-                <article key={testimonial.author}>
-                  <div className="shoulder-stars">★★★★★</div>
-
-                  <blockquote>“{testimonial.text}”</blockquote>
-
-                  <strong>{testimonial.author}</strong>
-                </article>
-              ))}
-            </div>
-
-            <div className="shoulder-testimonials-note">
-              <strong>Mais de 100 depoimentos escritos coletados.</strong>
-              <span>
-                A página apresenta apenas uma seleção dos relatos recebidos.
-              </span>
-            </div>
-          </div>
-        </section>
-
-        <section className="shoulder-offer-section">
-          <div className="container shoulder-offer-grid">
-            <div className="shoulder-offer-content">
-              <span className="shoulder-eyebrow">Sua matrícula inclui</span>
-
-              <h2>
-                Formação completa para transformar sua abordagem clínica do
-                ombro.
-              </h2>
-
-              <div className="shoulder-offer-list">
-                {[
-                  "Mais de 130 videoaulas",
-                  "11 módulos completos",
-                  "Aulas teóricas e práticas demonstrativas",
-                  "Certificado de 30 horas",
-                  "Quatro bônus complementares",
-                  "Acesso durante 12 meses",
-                  "Atualizações incluídas durante o período",
-                ].map((item) => (
-                  <div key={item}>
-                    <CheckIcon />
-                    <span>{item}</span>
-                  </div>
-                ))}
+                </div>
               </div>
             </div>
-
-            <div className="shoulder-price-card">
-              <span className="shoulder-price-label">
-                Investimento único
-              </span>
-
-              <div className="shoulder-price">
-                <small>R$</small>
-                <strong>97,00</strong>
-              </div>
-
-              <p>
-                Formação profissional completa com um investimento acessível
-                para estudantes e profissionais.
-              </p>
-
-              <CheckoutButton className="shoulder-checkout-button">
-                Fazer minha matrícula
-                <ArrowIcon />
-              </CheckoutButton>
-
-              <div className="shoulder-guarantee">
-                <strong>Garantia de 7 dias</strong>
-                <span>Compra e acesso pela plataforma Hotmart.</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="shoulder-faq-section">
-          <div className="container shoulder-faq-grid">
-            <div className="shoulder-faq-heading">
-              <span className="shoulder-eyebrow">Perguntas frequentes</span>
-              <h2>Tire suas dúvidas antes da matrícula.</h2>
-            </div>
-
-            <div className="shoulder-faq-list">
-              {faqs.map((faq, index) => (
-                <details key={faq.question}>
-                  <summary>
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <strong>{faq.question}</strong>
-                    <span className="shoulder-faq-plus">+</span>
-                  </summary>
-
-                  <p>{faq.answer}</p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="shoulder-final-cta">
-          <div className="container shoulder-final-content">
-            <span>O próximo passo da sua evolução clínica</span>
-
-            <h2>
-              Pare de aplicar técnicas isoladas e comece a tratar o ombro com
-              mais compreensão e raciocínio.
-            </h2>
-
-            <p>
-              Acesse agora uma formação completa, avance no seu ritmo e
-              desenvolva mais segurança na prática profissional.
-            </p>
-
-            <CheckoutButton className="button shoulder-final-button">
-              Fazer matrícula por R$ 97,00
-              <ArrowIcon />
-            </CheckoutButton>
-          </div>
-        </section>
-
-        <section className="shoulder-professional-notice">
-          <div className="container">
-            <p>
-              <strong>Aviso profissional:</strong> a utilização das técnicas e
-              recursos apresentados deve respeitar as resoluções, atribuições e
-              autorizações do conselho profissional de cada participante. Este
-              treinamento possui finalidade educacional e não amplia
-              atribuições profissionais previstas em lei.
-            </p>
-          </div>
-        </section>
-      </main>
-
-      <footer className="site-footer">
-        <div className="container footer-grid">
-          <div className="footer-brand">
-            <Link href="/" className="brand brand-footer">
-              <span className="brand-mark">FE</span>
-
-              <span className="brand-copy">
-                <strong>Dr. Frank Eduardo</strong>
-                <small>Educação em saúde</small>
-              </span>
-            </Link>
-
-            <p>
-              Conteúdo, atendimento, treinamentos e tecnologia para transformar
-              a prática clínica e o cuidado em saúde.
-            </p>
-          </div>
-
-          <div className="footer-column">
-            <strong>Conteúdo</strong>
-            <Link href="/artigos">Artigos</Link>
-            <Link href="/treinamentos/pacientes">Para pacientes</Link>
-            <Link href="/treinamentos/fisioterapeutas">
-              Para fisioterapeutas
-            </Link>
-          </div>
-
-          <div className="footer-column">
-            <strong>Soluções</strong>
-            <Link href="/consultorio">Consultório</Link>
-            <Link href="/tecnologia/fisioclinic">FisioClinic</Link>
-          </div>
-
-          <div className="footer-column">
-            <strong>Institucional</strong>
-            <Link href="/sobre">Sobre</Link>
-            <Link href="/contato">Contato</Link>
-            <a
-              href="https://www.youtube.com/@professorfisio"
-              target="_blank"
-              rel="noreferrer"
-            >
-              YouTube
-            </a>
           </div>
         </div>
+      </section>
 
-        <div className="container footer-bottom">
-          <p>
-            © {new Date().getFullYear()} Dr. Frank Eduardo. Todos os direitos
-            reservados.
+      <section className="border-b border-slate-200 bg-white">
+        <div className="container grid gap-6 py-10 sm:grid-cols-3">
+          {[["30h", "carga horária certificada"], ["11", "módulos de conteúdo"], ["4", "bônus complementares"]].map(([value, label]) => (
+            <div key={label} className="text-center sm:text-left">
+              <strong className="block text-3xl font-bold text-emerald-800">{value}</strong>
+              <span className="mt-1 block text-sm text-slate-500">{label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-slate-50 py-20">
+        <div className="container grid gap-12 lg:grid-cols-[.9fr_1.1fr]">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">Para quem quer tratar melhor</span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Muito além de decorar técnicas.</h2>
+          </div>
+          <div className="space-y-5 text-lg leading-8 text-slate-600">
+            <p>A terapia manual é uma das ferramentas utilizadas no manejo de alterações musculoesqueléticas. Mas dominar uma técnica sem saber quando, por que e para quem utilizá-la limita o resultado clínico.</p>
+            <p>O curso foi estruturado para integrar anatomia, biomecânica, avaliação, raciocínio clínico e aplicação prática no complexo do ombro.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="container">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">Benefícios</span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">O que você poderá desenvolver com o curso</h2>
+          </div>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {benefits.map((benefit) => (
+              <div key={benefit} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div className="flex gap-3">
+                  <CheckIcon />
+                  <p className="font-semibold leading-6 text-slate-800">{benefit}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center"><BuyButton /></div>
+        </div>
+      </section>
+
+      <section className="bg-[#0f281f] py-20 text-white">
+        <div className="container">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-300">Conteúdo programático</span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Do fundamento à aplicação clínica</h2>
+          </div>
+
+          <div className="mt-12 grid gap-5 lg:grid-cols-2">
+            {modules.map(([title, items]) => (
+              <details key={title} className="group rounded-2xl border border-white/10 bg-white/[0.05] p-6">
+                <summary className="cursor-pointer list-none pr-8 text-lg font-bold">{title}</summary>
+                <ul className="mt-5 space-y-2 text-sm leading-6 text-white/70">
+                  {items.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <span className="text-emerald-300">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center"><BuyButton /></div>
+        </div>
+      </section>
+
+      <section className="bg-slate-50 py-20">
+        <div className="container">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">Bônus</span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Além de todo o conteúdo, você recebe mais 4 bônus.</h2>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {[
+              ["Bônus 01", "Introdução à Terapia Manual"],
+              ["Bônus 02", "Diagnóstico Diferencial"],
+              ["Bônus 03", "Técnica para Cervical + Integração dos Sistemas"],
+              ["Bônus 04", "Conteúdo complementar em dor e integração clínica"],
+            ].map(([n, title]) => (
+              <article key={n} className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+                <span className="text-sm font-bold text-emerald-700">{n}</span>
+                <h3 className="mt-3 text-xl font-bold">{title}</h3>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="container grid items-center gap-12 lg:grid-cols-[.8fr_1.2fr]">
+          <div className="relative min-h-[480px] overflow-hidden rounded-[2rem] bg-slate-100">
+            <Image src="/images/frank-eduardo-sobre.jpg" alt="Dr. Frank Eduardo" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
+          </div>
+
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">Sobre o docente</span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Experiência clínica aplicada ao ensino.</h2>
+            <p className="mt-6 text-lg leading-8 text-slate-600">
+              Frank Eduardo é fisioterapeuta, com atuação em terapia manual, osteopatia e quiropraxia. Sua experiência clínica é a base para transformar conceitos técnicos em raciocínio aplicável ao atendimento.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0f281f] py-20 text-white">
+        <div className="container">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-300">Prova social</span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">O que alunos já disseram sobre o curso</h2>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {testimonials.map(([quote, author]) => (
+              <blockquote key={author} className="rounded-3xl border border-white/10 bg-white/[0.06] p-7">
+                <p className="text-lg leading-8 text-white/80">“{quote}”</p>
+                <footer className="mt-5 font-bold text-emerald-200">{author}</footer>
+              </blockquote>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center"><BuyButton /></div>
+        </div>
+      </section>
+
+      <section className="bg-slate-50 py-20">
+        <div className="container grid items-center gap-10 lg:grid-cols-[.7fr_1.3fr]">
+          <div className="mx-auto flex h-48 w-48 items-center justify-center rounded-full border-[12px] border-amber-400 bg-slate-950 text-center text-white shadow-xl">
+            <div>
+              <span className="block text-xs font-bold uppercase tracking-[0.12em] text-amber-300">Garantia</span>
+              <strong className="mt-1 block text-4xl">7 dias</strong>
+              <span className="mt-1 block text-xs uppercase">Risco zero</span>
+            </div>
+          </div>
+
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">Compra protegida</span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Você tem 7 dias para conhecer o curso.</h2>
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">
+              Caso o conteúdo não corresponda às suas expectativas, você poderá solicitar o reembolso dentro do prazo de garantia aplicável à compra realizada pela plataforma.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="container max-w-4xl">
+          <div className="text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">Dúvidas frequentes</span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Antes de se matricular</h2>
+          </div>
+
+          <div className="mt-10 space-y-4">
+            {faq.map(([q, a]) => (
+              <details key={q} className="rounded-2xl border border-slate-200 bg-white p-6">
+                <summary className="cursor-pointer list-none font-bold text-slate-900">{q}</summary>
+                <p className="mt-4 leading-7 text-slate-600">{a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0e241d] py-20 text-white">
+        <div className="container max-w-4xl text-center">
+          <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-300">Terapia Manual Aplicada ao Ombro</span>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">
+            Desenvolva uma abordagem mais organizada para avaliar e tratar o ombro.
+          </h2>
+          <div className="mt-8"><BuyButton label="Quero acessar o curso" /></div>
+          <p className="mt-8 text-xs leading-6 text-white/45">
+            A aplicação de técnicas e recursos depende das resoluções, competências e autorizações de cada conselho profissional. Em caso de dúvida, consulte o seu conselho de classe.
           </p>
-
-          <p>Treinamento destinado a profissionais e estudantes da saúde.</p>
         </div>
-      </footer>
-    </div>
+      </section>
+    </main>
   );
 }
