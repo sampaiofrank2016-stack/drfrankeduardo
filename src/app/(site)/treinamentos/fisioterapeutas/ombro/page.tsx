@@ -123,7 +123,7 @@ export default function TerapiaManualOmbroPage() {
 
             <div className="relative min-h-[390px] sm:min-h-[460px] lg:min-h-[520px]">
               <Image
-                src="/images/curso-ombro-box.png"
+                src="/terapia-manual-ombro-capa.png"
                 alt="Curso Terapia Manual Aplicada ao Ombro"
                 fill
                 priority
