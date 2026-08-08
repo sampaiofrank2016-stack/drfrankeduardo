@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-const checkoutUrl = "https://pay.hotmart.com/H39460015D?off=cezjyzl0";
+const checkoutUrl = "https://pay.hotmart.com/H39460015D?off=cezjyzl0&checkoutMode=10";
 
 export const metadata: Metadata = {
   title: "Terapia Manual Aplicada ao Ombro | Curso para Fisioterapeutas",
